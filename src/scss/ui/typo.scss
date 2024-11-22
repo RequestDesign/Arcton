@@ -1,0 +1,111 @@
+.txtBig {
+  //styleName: Big Text;
+  font-family: IBM Plex Sans;
+  font-size: 7.6rem;
+  font-weight: 500;
+  line-height: 110%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    //styleName: mobile/Big Text;
+    font-size: 8.8rem;
+    line-height: 110%;
+  }
+}
+
+.tl1 {
+  //styleName: H1;
+  font-family: IBM Plex Sans;
+  font-size: 7.6rem;
+  font-weight: 500;
+  line-height: 110%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 6.8rem;
+  }
+}
+
+
+.tl2 {
+  //styleName: H2;
+  font-family: IBM Plex Sans;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 110%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 6rem;
+  }
+
+}
+
+
+
+
+.tl3 {
+  font-family: IBM Plex Sans;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 130%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 3.6;
+  }
+}
+
+.tl4 {
+  //styleName: large;
+  font-family: IBM Plex Sans;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 110%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 4.4rem;
+  }
+
+}
+
+.txt22 {
+  //styleName: Text 22 Medium;
+  font-family: IBM Plex Sans;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 3.2rem;
+  }
+  &._bold{
+    font-weight: 500;
+  }
+
+}
+.txt18 {
+  //styleName: Text 22 Medium;
+  font-family: IBM Plex Sans;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 110%;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  @include mobile {
+    font-size: 3.6rem;
+  }
+  &._bold{
+    font-weight: 500;
+  }
+
+}

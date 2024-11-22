@@ -1,0 +1,22 @@
+.swiper-nav {}
+
+.swiper-btn {
+    width: 5.6rem;
+    height: 5.6rem;
+    background-color: $gray;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    @include mobile {
+        width: 9.2rem;
+        height: 9.2rem;
+    }
+    &-next{
+        background-image: url(../assets/images/icons/arrow-small-right.svg);
+    }
+    &-prev{
+        background-image: url(../assets/images/icons/arrow-small-left.svg);
+    }
+}

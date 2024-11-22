@@ -1,0 +1,13 @@
+// typography
+@import './typo';
+@import './btns';
+@import './inputs';
+@import './swiper';
+
+.col{
+
+    &-gray{
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+

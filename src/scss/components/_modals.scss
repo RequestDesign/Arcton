@@ -1,0 +1,154 @@
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1111;
+
+    width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+
+    &-c-wrp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            overflow: auto;
+            height: 100vh;
+        }
+
+    }
+
+    &-main {
+
+        background-color: rgba(191, 183, 183, 0.1);
+        backdrop-filter: 1rem;
+        -webkit-backdrop-filter: 1rem;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &._opened {
+
+        & .modal__c {
+            transform: translate(0, 0);
+        }
+
+
+    }
+
+
+    &__c {
+        transform: translate(0, -50%);
+        transition: transform .5s;
+        position: relative;
+        gap: 2rem;
+        background-color: $white;
+        border-radius: 3rem;
+        padding: 6rem;
+        border-radius: 3rem 0 3rem 3rem;
+        box-sizing: border-box;
+        width: 100rem;
+        min-height: 50rem;
+
+        @include mobile {
+            width: 100%;
+            padding: 4rem 3rem;
+        }
+
+
+        &-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 5.6rem;
+            height: 5.6rem;
+            position: absolute;
+            right: -0rem;
+            top: -5.6rem;
+            z-index: 10;
+            background-image: url(../assets/images/icons/x.svg);
+            background-size: 1.4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: $gray;
+            border-radius: 50%;
+            border: 10px solid $white;
+            border-radius: 50% 50% 0 0;
+
+
+
+            @include mobile {
+                width: 6.4rem;
+                height: 6.4rem;
+                margin-bottom: 4rem;
+                background-size: 100%;
+
+
+            }
+        }
+
+        &._request {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            & form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: .5rem 2.4rem;
+
+                @include mobile {
+                    grid-template-columns: 100%;
+                }
+
+                & ._row {
+
+                    @include desktop {
+                        grid-column: 1 / span 2;
+                    }
+
+                }
+
+                & ._footer {
+                    @include desktop {
+                        grid-column: 1 / span 2;
+                    }
+
+                    display: flex;
+                    width: 100%;
+                    gap: 2rem;
+                    align-items: center;
+
+                    @include mobile {
+                        flex-direction: column;
+
+                    }
+                }
+
+
+
+
+
+
+            }
+        }
+
+        &._success {
+            justify-content: center;
+            gap: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+
+    }
+
+}

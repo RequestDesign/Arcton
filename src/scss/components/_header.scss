@@ -1,0 +1,162 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+    &__c {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            grid-template-columns: auto min-content;
+            grid-template-rows: min-content 0fr;
+            padding: 4rem 3rem;
+            transition: grid .5s linear;
+            background-color: $green;
+
+            &._opened {
+                grid-template-rows: min-content 1fr;
+
+            }
+
+        }
+
+        &-logo {
+            height: 5.5rem;
+
+            @include mobile {
+                height: 8rem;
+            }
+
+            & img {
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+
+        &-nav {
+            padding: 3rem 5rem;
+            box-sizing: border-box;
+            background-color: $bg;
+
+            @include mobile {
+                overflow: hidden;
+                height: 100%;
+                padding: 0;
+                grid-column: 1 / span 2;
+
+            }
+
+            &-list {
+                height: 5.5rem;
+                display: flex;
+                gap: 2.4rem;
+                align-items: center;
+
+                @include mobile {
+
+                    height: 71vh;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 20rem 0 6rem;
+                    box-sizing: content-box;
+                    gap: 4rem;
+
+                }
+
+                & a:hover {
+                    color: $red-dark;
+                    text-decoration: underline;
+                }
+
+                & div.mobile {
+                    margin-top: 20rem;
+
+                    & a {
+                        display: flex;
+                        gap: 2rem;
+
+                        & img {
+                            width: 4.8rem;
+                            height: 4.8rem;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        &-services {
+            padding: 1.6rem 3.2rem;
+            box-sizing: border-box;
+            border-radius: 3rem;
+            background-color: $bg;
+
+        }
+
+        &-opener {
+            justify-self: flex-end;
+            background-color: $red-dark;
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 50%;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 9rem;
+            height: 9rem;
+
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            position: relative;
+            transition: all .5s;
+
+
+
+            & span {
+                display: block;
+                width: 4rem;
+                height: 1px;
+                background-color: $white;
+                transition: all .5s;
+            }
+
+            &._opened {
+                background-color: transparent;
+                gap: 1.5rem;
+
+                & span {
+                    opacity: 0;
+                    width: 4.7rem;
+                    margin-left: 1.5rem;
+                    background-color: $red-dark;
+
+                    &:first-of-type {
+                        opacity: 1;
+                        transform: rotate(45deg);
+                        transform-origin: left top;
+                    }
+
+                    &:last-of-type {
+                        opacity: 1;
+                        transform: rotate(-45deg);
+                        transform-origin: left bottom;
+
+
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+}
