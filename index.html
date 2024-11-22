@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>я тут</title>
+<script defer src="js/swiper.js"></script><script defer src="js/jquery.js"></script><script defer src="js/inputmask.js"></script><script defer src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head>
+
+<body>
+  <div class="wrapper">
+    <main>
+
+      <ol>
+        <li>
+          <a href="./main.html" class="tl2">Главная</a>
+        </li>
+
+
+      </ol>
+      <ul>
+
+        <button class="btn-primary modal-opener" data-modal="request">
+          modal request
+          <span class="btn-primary-arrow"></span>
+        </button>
+        <button class="btn-primary modal-opener" data-modal="success">
+          modal success
+          <span class="btn-primary-arrow"></span>
+        </button>
+        <a href="./ui.html" class="tl3">ui</a>
+      </ul>
+
+
+      </ol>
+
+    </main>
+    <div class="modal modal-request ">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c _request">
+                <button class="modal__c-close modal-closer">
+                </button>
+                <p class="tl1 ">
+                    Давайте сотрудничать
+                </p>
+                <form>
+                    <label class="input ">
+                        <input type="text" placeholder="placeholder">
+                        <span class="input-error"> добавь ._error на лэйбл</span>
+                    </label>
+                    <label class="input ">
+                        <input type="text" placeholder="placeholder">
+                        <span class="input-error"> добавь ._error на лэйбл</span>
+                    </label>
+                    <label class="input ">
+                        <input type="text" placeholder="placeholder">
+                        <span class="input-error"> добавь ._error на лэйбл</span>
+                    </label>
+                    <label class="input ">
+                        <input type="text" placeholder="placeholder">
+                        <span class="input-error"> добавь ._error на лэйбл</span>
+                    </label>
+
+                    <label class="input _row">
+                        <textarea type="text" rows="4" placeholder="placeholder"></textarea>
+                        <span class="input-error"> добавь ._error на лэйбл</span>
+                    </label>
+                    <div class="_footer">
+                        <label class="input">
+                            <input type="checkbox">
+                            <span class="input-text">Даю согласие на обработку персональных данных</span>
+                        </label>
+
+
+
+                        <button class="btn-primary">
+                            Отправить
+                            <span class="btn-primary-arrow"></span>
+                        </button>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-success ">
+    <div class="modal-main  modal-closer">
+        <div class="modal-c-wrp">
+            <div class="modal__c _success">
+                <button class="modal__c-close modal-closer">
+                </button>
+                <p class="tl1 ">
+                    Заявка отправлена
+                </p>
+                <p class="txt22">
+                    В ближайшее время с Вами свяжется наш менеджер
+                </p>
+                <a href="#" class="btn-primary">
+                    На главную
+                    <span class="btn-primary-arrow"></span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modals -->
+<!-- footer -->
+<footer class="footer">
+    <div class="container footer__c">
+        <ul class="footer__c-top">
+            <li>
+                <a href="#" class="footer__c-top-logo">
+                    <img src="../assets/images/icons/logo-white.svg" alt="">
+                </a>
+                <p class="txt22 _bold">
+                    Ваш надежный партнер <br> в строительстве
+                </p>
+            </li>
+            <li>
+                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">О компании</a>
+            </li>
+            <li>
+                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">О компании</a>
+            </li>
+            <li>
+                <a class="txt18 _bold" href="tel:1488">
+                    <img src="../assets/images/icons/phone.svg" alt="">
+                    +7 777 777 77 77
+                </a>
+                <a class="txt18 _bold" href="#" target="_blank">
+                    <img src="../assets/images/icons/geo.svg" alt="">
+                    geography
+                </a>
+                <a class="txt18 _bold" href="mailto:loh@mail.ru">
+                    <img src="../assets/images/icons/mail.svg" alt="">
+                    example@for.ru
+                </a>
+
+            </li>
+        </ul>
+        <div class="footer__c-bottom">
+            <p class="txt18 col-gray">© 2024 Арктон Строй</p>
+            <p class="txt18 col-gray">Информация, размещенная на сайте, не является публичной офертой</p>
+        </div>
+
+    </div>
+</footer>
+  </div>
+
+  <style>
+    @charset "UTF-8";
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      /* min-width: 32rem; */
+      background: #eeeef0;
+      color: #191817;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    html {
+      font-size: 0.5208335vw;
+    }
+
+    body {
+      padding: 5rem 0;
+      font-family: 'Source Code Pro';
+      font-size: 100%;
+      line-height: 1;
+      font-size: 2.5rem;
+      user-select: none;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 10rem;
+    }
+
+    ul li,
+    ol li {
+      font-size: 2.3rem;
+    }
+
+    li {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a {
+      color: #191817;
+      transition: color 0.5s ease;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #191817;
+    }
+
+    a:hover {
+      color: #191817;
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin-bottom: 5rem;
+      font-size: 5rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+
+    .root {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 48em) {
+      html {
+        font-size: 1.5625vw;
+      }
+    }
+  </style>
+</body>
+
+</html>
