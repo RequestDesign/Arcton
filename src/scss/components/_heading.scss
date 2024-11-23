@@ -1,0 +1,75 @@
+.heading {
+    width: 100%;
+    @include vh100;
+    margin-top: 00;
+
+    &__c {
+        width: 100%;
+        height: 100%;
+
+        &-slide {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+           &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 0.2);
+           }
+
+            &-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                display: flex;
+
+                & img {
+                    object-fit: cover;
+                }
+            }
+
+            &-body {
+                padding: 24rem 0 16rem;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-top {
+                    display: flex;
+                    flex-wrap: wrap;
+                    max-width: 90rem;
+
+                    @include mobile {
+                        max-width: 100%;
+
+                        & .txtBig {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8rem;
+                        }
+                    }
+
+                }
+
+                &-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    width: 60rem;
+                    @include mobile{
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

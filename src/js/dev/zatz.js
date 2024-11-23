@@ -1,32 +1,29 @@
 import $ from 'jquery'
-import Form from '../utils/Form'
 import Inputmask from 'inputmask'
 import Swiper from 'swiper';
 import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
-
+import { rem } from '../utils/constants'
+import { Fancybox } from "@fancyapps/ui";
+import { Switcher } from '../utils/Switcher';
 
 $(function () {
     dropDowns()
     modalsHandler()
+    initSwipers()
+    initFancybox()
+    initSwitchers()
 
+    const phone = document.querySelectorAll('input[name="phone"]')
+    if (phone) {
+        phone.forEach((e) => {
+            new Inputmask('+7 (999) 999-99-99').mask($(e));
+        })
+
+
+    }
 })
 
-function initForms() {
-    function formSubmit(inputData) {
-        console.log(inputData);
-    }
-    const forms = document.querySelectorAll('.form')
-    if (forms) {
-        forms.forEach((e) => {
-            new Form(e, formSubmit)
-            const phone = $(e).find('input[name="phone"]')
-            if (phone) {
-                new Inputmask('+375 (999) 999-99-99').mask(phone);
-            }
 
-        })
-    }
-}
 function dropDowns() {
     const ddBtn = $('.drop-down-target'),
         html = $('html')
@@ -57,33 +54,171 @@ function dropDowns() {
 
 }
 function initSwipers() {
-    /* const complects = document.querySelectorAll('.complects__c-slider')
-    if (complects) {
-        complects.forEach((e) => {
-            new Swiper(e, {
-                modules: [Navigation, Pagination],
-                loop: false,
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                spaceBetween: rem(3),
-                breakpoints: {
-                    768: {
-                        slidesPerView: 5,
-                        slidesPerGroup: 1,
+    const heading = document.querySelector('.heading')
+    if (heading) {
 
-                    }
+        new Swiper(heading.querySelector('.swiper'), {
+            modules: [Pagination, Autoplay],
+            loop: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: heading.querySelector('.swiper-pagination'),
+                type: 'bullets'
+            },
+            on: {
+                init: (swiper) => {
+                    heading.classList.add('_swiper-autoplay')
                 },
-                pagination: {
-                    el: e.querySelector('.complects__c-slider-pagination')
-                },
-                navigation: {
-                    prevEl: e.querySelector('.complects__c-slider-prev'),
-                    nextEl: e.querySelector('.complects__c-slider-next')
-                },
+                autoplayStop: (swiper) => {
+                    heading.classList.remove('_swiper-autoplay')
+                }
+            }
 
-            })
+
         })
-    } */
+
+    }
+    const ourServices = document.querySelector('.our-services')
+    if (ourServices) {
+        new Swiper(ourServices.querySelector('.swiper'), {
+            modules: [Navigation],
+            loop: false,
+            spaceBetween: rem(3),
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            breakpoints: {
+                768: {
+                    centeredSlides: false,
+                    slidesPerView: 3
+                }
+            },
+            navigation: {
+                prevEl: ourServices.querySelector('.swiper-btn-prev'),
+                nextEl: ourServices.querySelector('.swiper-btn-next'),
+            }
+
+        })
+    }
+    const images = document.querySelector('.swiper.active-projects__images'),
+        table = document.querySelector('.swiper.active-projects__body')
+
+    if (images && table) {
+
+
+        const bar = document.querySelector('.main.active-projects'),
+            btnNext = bar.querySelector('.swiper-btn-next'),
+            btnPrev = bar.querySelector('.swiper-btn-prev')
+
+
+        const imagesSwiper = new Swiper(images, {
+            simulateTouch: false,
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: rem(2),
+            initialSlide: 0,
+            breakpoints: {
+                768: {
+
+                    slidesPerView: 1,
+
+                }
+            },
+
+        })
+        const tableSwiper = new Swiper(table, {
+            modules: [Pagination],
+            loop: false,
+            simulateTouch: false,
+            slidesPerView: 1,
+            spaceBetween: rem(2),
+            initialSlide: 0,
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+
+
+                }
+            },
+            pagination: {
+                el: bar.querySelector('.swiper-pagination'),
+                type: "bullets"
+            },
+            on: {
+
+
+            }
+        })
+
+        imagesSwiper.on('slideChange', (swiper) => {
+
+            if (window.innerWidth < 768) {
+                const active = swiper.activeIndex;
+                tableSwiper.slideTo(active)
+            }
+
+
+        })
+        tableSwiper.on('slideChange', (swiper) => {
+
+            if (window.innerWidth < 768) {
+                const active = swiper.activeIndex;
+                imagesSwiper.slideTo(active)
+            }
+
+        })
+        btnNext.addEventListener('click', (ev) => {
+            imagesSwiper.slideNext()
+            tableSwiper.slideNext()
+        })
+        btnPrev.addEventListener('click', (ev) => {
+            imagesSwiper.slidePrev()
+            tableSwiper.slidePrev()
+        })
+    }
+
+    const projectsComplited = document.querySelector('.complited-projects')
+    if (projectsComplited) {
+        new Swiper(projectsComplited.querySelector('.swiper'), {
+            modules: [Navigation],
+            slidesPerView: 1.2,
+            spaceBetween: rem(2),
+            centeredSlides: true,
+            breakpoints: {
+                768: {
+                    centeredSlides: false,
+                    slidesPerView: 2
+                }
+            },
+            navigation: {
+                nextEl: projectsComplited.querySelector('.swiper-btn-next'),
+                prevEl: projectsComplited.querySelector('.swiper-btn-prev')
+            }
+
+        })
+    }
+
+    const mails = document.querySelector('.mails')
+    if (mails) {
+
+        new Swiper(mails.querySelector('.swiper'), {
+            slidesPerView: 1.3,
+            spaceBetween: rem(3),
+            centeredSlides: true,
+            breakpoints: {
+                768: {
+                    centeredSlides: false,
+                    slidesPerView: 4
+                }
+
+            }
+        })
+    }
+
 
 }
 function modalsHandler() {
@@ -121,9 +256,27 @@ function modalsHandler() {
     })
 }
 
-function initSwichers() {
-    /*   const basketDelivery = document.querySelector('.switcher-delivery')
-      if (basketDelivery) {
-          new Switcher(basketDelivery, 0)
-      } */
+function initSwitchers() {
+    const projects = document.querySelector('.projects')
+    if (projects) {
+        new Switcher(projects, 0)
+    }
+}
+
+function initFancybox() {
+    const anytarget = document.querySelector('[data-fancybox]')
+    if (!anytarget) return
+
+
+
+    Fancybox.bind('[data-fancybox]', {
+        Thumbs: false,
+        Toolbar: {
+            display: {
+                left: [],
+                middle: ["infobar"],
+                right: ["close"],
+            },
+        },
+    })
 }

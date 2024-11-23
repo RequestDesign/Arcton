@@ -1,0 +1,91 @@
+.request-form {
+
+    background-color: $white;
+    padding-bottom: 8rem;
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        &-heading {
+            background-color: $bg;
+            padding: 3rem;
+            box-sizing: border-box;
+            border-radius: 0 0 3rem 0;
+        }
+
+        &>.txt22 {
+            @include desktop {
+
+                text-align: right;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 9rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            margin-top: 5rem;
+
+        }
+
+        &-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 2.4rem;
+            grid-auto-rows: min-content;
+
+            @include mobile {
+                grid-template-columns: 100%;
+
+            }
+
+            &-comment {
+                grid-template-rows: auto min-content;
+
+                @include desktop {
+                    height: 100%;
+                    grid-column: 2;
+                    grid-row: 1 / span 4;
+                }
+                @include mobile{
+                    height: 24rem;
+                }
+            }
+
+            &-check {
+                width: fit-content;
+            }
+            & .btn-primary{
+                justify-self: flex-end;
+            }
+
+        }
+
+        &-useless {
+            height: 36rem;
+            display: flex;
+            @include mobile{
+                grid-row: 1;
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 1.5rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,198 @@
+.our-services {
+    background-color: $white;
+
+    & .container {
+        position: relative;
+
+        @include mobile {
+            padding: 0;
+        }
+    }
+
+    &__top {
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        & .tl1 {
+            background-color: $bg;
+        }
+
+        &-tags {
+            transform: translateY(-50%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            @include mobile{
+                transform: translate(0);
+            }
+        }
+    }
+
+
+    &__slide {
+        box-sizing: border-box;
+        padding-right: 5rem;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        & a {
+            background-color: $bg;
+            border-radius: 3rem;
+            position: relative;
+            padding: 2rem;
+            box-sizing: border-box;
+            height: 41rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @include mobile {
+                height: 68rem;
+                gap: 4rem;
+                padding: 4rem;
+
+            }
+
+            @include hover {
+                & .our-services__slide-link {
+                    width: 15rem;
+
+                    &::after {
+                        width: 15rem;
+                        border-radius: 3rem;
+                        background-position: 90% 50%;
+                    }
+
+                    & .txt18 {
+                        color: $white;
+                    }
+                }
+
+                & .our-services__slide-counter {
+                    color: $red-dark;
+                }
+
+                & .tl3 {
+                    color: $red-dark;
+                }
+            }
+
+        }
+
+        &-img {
+            height: 22rem;
+            display: flex;
+            border-radius: 3rem;
+            overflow: hidden;
+            width: calc(100% - 5rem);
+
+            @include mobile {
+                height: 28rem;
+                width: 100%;
+            }
+
+            & img {
+                object-fit: cover;
+            }
+        }
+
+        &-counter {
+            position: absolute;
+            top: 2rem;
+            right: 0;
+            transform: translateX(50%);
+            font-family: IBM Plex Sans;
+            font-size: 9rem;
+            font-weight: 500;
+            line-height: 100%;
+            color: $gray;
+            transition: color .2s linear;
+
+        }
+
+        & .tl3 {
+            @include wrap-text(3);
+        }
+
+        &-link {
+            margin-top: auto;
+            position: relative;
+            color: $red-dark;
+            height: 4.6rem;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-weight: 500;
+            transition: width .2s linear;
+
+            &::after {
+                position: absolute;
+                z-index: 1;
+                content: '';
+                right: 0;
+                top: 0;
+                background-color: $red-dark;
+                background-image: url(../../assets/images/icons/arrow-small-right.svg);
+                background-position: 55% 50%;
+                background-size: 1.2rem;
+                background-repeat: no-repeat;
+                width: 4.6rem;
+                height: 4.6rem;
+                border-radius: 50%;
+                transition: width .2s linear, border-radius .2s linear;
+
+            }
+
+            & .txt18 {
+                position: relative;
+                z-index: 2;
+                transition: color .2s linear;
+                padding-left: 2rem;
+            }
+        }
+    }
+
+    & .swiper-btn {
+        position: absolute;
+        top: 37rem;
+        z-index: 1;
+
+        &-prev {
+            left: 0;
+            transform: translateX(-150%);
+        }
+
+        &-next {
+            right: 0;
+            transform: translateX(150%);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5rem;
+        @include mobile{
+            padding: 0 2rem;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        &-link {
+            padding: 2rem;
+            box-sizing: border-box;
+            background-color: $bg;
+        }
+    }
+}

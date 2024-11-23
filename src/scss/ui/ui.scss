@@ -2,12 +2,20 @@
 @import './typo';
 @import './btns';
 @import './inputs';
+@import './tag';
 @import './swiper';
+
 
 .col{
 
     &-gray{
         color: rgba(255, 255, 255, 0.8);
+    }
+    &-wh{
+        color: $white;
+    }
+    &-red{
+        color: $red-dark;
     }
 }
 

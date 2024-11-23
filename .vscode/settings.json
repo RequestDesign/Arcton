@@ -1,0 +1,24 @@
+{
+    "favorites.resources": [
+        {
+            "filePath": "src\\scss\\dev\\zatz.scss",
+            "group": "Default"
+        },
+        {
+            "filePath": "src\\js\\dev\\zatz.js",
+            "group": "Default"
+        },
+        {
+            "filePath": "src\\index.html",
+            "group": "Default"
+        },
+        {
+            "filePath": "src\\scss\\ui\\ui.scss",
+            "group": "Default"
+        },
+        {
+            "filePath": "src\\scss\\ui\\typo.scss",
+            "group": "Default"
+        }
+    ]
+}

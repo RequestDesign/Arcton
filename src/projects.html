@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <section class="heading">
+                <div class="heading__c swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide heading__c-slide">
+                            <div class="heading__c-slide-img">
+                                <img src="./assets/images/image.png" alt="">
+                            </div>
+                            <div class="container heading__c-slide-body">
+                                <div class="heading__c-slide-body-top">
+
+                                    <span class="txtBig col-wh">
+                                        Ваш надежный партнер в строительстве
+                                        <a href="#" class="btn-primary">
+                                            Оставить заявку
+                                            <span class="btn-primary-arrow"></span>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="heading__c-slide-body-bottom col-wh">
+                                    <p class="tl2">Доверьтесь нам!</p>
+                                    <p class="txt22 _bold">
+                                        Специализируемся на предоставлении полного спектра услуг в области
+                                        строительства, реконструкции и
+                                        капитального ремонта
+                                    </p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="swiper-slide heading__c-slide">
+                            <div class="heading__c-slide-img">
+                                <img src="./assets/images/image.png" alt="">
+                            </div>
+                            <div class="container heading__c-slide-body">
+                                <div class="heading__c-slide-body-top">
+
+                                    <p class="txtBig">
+                                        слайд 2
+                                    </p>
+                                </div>
+                                <div class="heading__c-slide-body-bootom">
+                                    <p class="tl2">слайд 2 еще раз</p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="swiper-slide heading__c-slide">
+                            <div class="heading__c-slide-img">
+                                <img src="./assets/images/image.png" alt="">
+                            </div>
+                            <div class="container heading__c-slide-body">
+                                <div class="heading__c-slide-body-top">
+
+                                    <p class="txtBig">
+                                        слайд 3
+                                    </p>
+                                </div>
+                                <div class="heading__c-slide-body-bootom">
+                                    <p class="tl2">слайд 3 еще раз</p>
+
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination _overlay">
+
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <section class="projects">
+                <div class="container">
+                    <div class="projects__top">
+                        <p class="tl1">Проекты</p>
+                        <div class="projects__top-btns">
+                            <button class="switcher-btn tl3">
+                                Проекты в реализации
+                            </button>
+                            <button class="switcher-btn tl3">
+                                Завершённые проекты
+                            </button>
+                        </div>
+                    </div>
+                    <div class="projects-container">
+                        <div class="projects-wrapper">
+                            <div class="switcher-slide">
+                                <ul>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="switcher-slide">
+                                <ul>
+                                    <li>
+                                        <include src="./components/_project-card.html"></include>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary">
+                        Загрузить ещё
+                        <span class="btn-primary-arrow"></span>
+                    </button>
+
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>
