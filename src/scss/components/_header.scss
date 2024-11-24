@@ -17,7 +17,7 @@
             grid-template-rows: min-content 0fr;
             padding: 4rem 3rem;
             transition: grid .5s linear;
-            background-color: $green;
+          
 
             &._opened {
                 grid-template-rows: min-content 1fr;

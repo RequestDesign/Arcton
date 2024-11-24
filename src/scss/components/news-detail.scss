@@ -1,0 +1,66 @@
+.news-detail {
+    @include mobile {
+        margin-top: 20rem;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__date {
+        padding: 1.6rem;
+        border-radius: 1.5rem;
+        background-color: $red-dark;
+        color: $white;
+        width: fit-content;
+
+        @include mobile {
+            font-size: 3.2rem;
+        }
+
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr .8fr;
+        gap: 3rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+
+            & ul li {
+                list-style-type: disc;
+                list-style-position: inside;
+
+                &::marker {
+                    color: $red-dark;
+                }
+            }
+        }
+
+        &-right {
+            @include mobile {
+                grid-row: 1;
+            }
+        }
+    }
+}
+
+.another {
+    & .container {
+        gap: 5rem;
+        @include mobile{
+            gap: 10rem;
+        }
+    }
+
+    margin-bottom: $sectionGap;
+}

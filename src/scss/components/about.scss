@@ -1,0 +1,380 @@
+.about {}
+
+
+.spectr {
+    &__c {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+
+        @include mobile {
+            grid-template-columns: 100%;
+        }
+
+    }
+}
+
+.history {
+    background-color: $white;
+    padding-bottom: 20rem;
+
+    &__top {
+        background-color: $bg;
+        margin: auto;
+        margin-bottom: 5rem;
+        padding: 1rem 5rem 2rem;
+        box-sizing: border-box;
+
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 63.6rem 90rem;
+        grid-template-rows: 50rem;
+        gap: 2.4rem;
+        width: 100%;
+
+        @include mobile {
+            grid-template-columns: 100%;
+            gap: 0;
+        }
+
+        &-left {
+            @include br;
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            z-index: 1;
+
+            @include mobile {
+                transform: translateY(4rem);
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-right {
+            width: 100%;
+            background-color: $bg;
+            @include br;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+            z-index: 2;
+
+            & .swiper {
+                background-color: $white;
+                border-radius: 2rem;
+                width: 100%;
+                height: 100%;
+
+                & .swiper-slide {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.4rem;
+                    padding: 3rem;
+                    padding-bottom: 12rem;
+                    box-sizing: border-box;
+
+                    @include mobile {
+                        padding-bottom: 14rem;
+                    }
+                }
+
+                & .swiper-navigation {
+                    position: absolute;
+                    z-index: 5;
+                    right: 4rem;
+                    bottom: 4rem;
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+.advantages {
+
+    margin-top: 0;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        & .btn-primary {
+            margin: auto;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            padding: 0 3rem;
+        }
+
+        &-bg {
+            background-color: $white;
+            padding: 1rem 5rem 2rem;
+            box-sizing: border-box;
+        }
+
+    }
+
+    &__slider {
+        position: relative;
+
+        & .swiper-btn {
+            position: absolute;
+            top: 13rem;
+
+            &-prev {
+                left: 0;
+                transform: translateX(-150%);
+            }
+
+            &-next {
+                right: 0;
+                transform: translateX(150%);
+            }
+        }
+
+        & .swiper {
+            width: 100%;
+
+            &-slide {
+                background-color: $red-dark;
+                @include br;
+                padding: 1rem 2rem;
+                box-sizing: border-box;
+            }
+        }
+
+        &-e {
+            background-color: $white;
+            border-radius: 1rem 10rem 1rem 1rem;
+            padding: 1.6rem;
+            box-sizing: border-box;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.2rem;
+
+            @include mobile {
+                grid-template-columns: 100%;
+                grid-template-rows: 40rem 40rem;
+                border-radius: 2rem 15rem 2rem 2rem;
+            }
+
+            &-count {
+                position: absolute;
+                right: 0rem;
+                top: 0rem;
+
+            }
+
+            &-img {
+                display: flex;
+                @include br;
+                overflow: hidden;
+                height: 100%;
+
+                @include mobile {
+                    border-radius: 2rem 15rem 2rem 2rem;
+                }
+
+                & img {
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            &-text {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5rem;
+            }
+        }
+
+
+    }
+}
+
+.video {
+    &__c {
+        height: 72rem;
+        @include br;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        &-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            @include br;
+            overflow: hidden;
+
+            @include mobile {
+                margin: 0 3rem;
+                width: calc(100% - 6rem);
+            }
+
+            &-play {
+                border-radius: 50%;
+                width: 11rem;
+                height: 11rem;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile {
+                    width: 9rem;
+                    height: 9rem;
+                }
+
+                & svg {
+                    @include mobile {
+                        width: 2.4rem;
+                        height: 2.8rem;
+                    }
+                }
+
+            }
+
+            @include hover {
+                background-color: rgba(0, 0, 0, 0.4);
+
+                & .video__c-overlay-play {
+                    background-color: $red-dark;
+
+                    & svg {
+                        fill: $white;
+                    }
+                }
+            }
+
+        }
+
+        &-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            @include br;
+            overflow: hidden;
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.complects {
+    @include mobile{
+        background-color: $white;
+        padding: 8rem 0;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &-bg {
+            background-color: $white;
+            padding: 5rem;
+            box-sizing: border-box;
+        }
+    }
+
+    &__body {
+        background-color: $white;
+        padding: 2rem;
+        box-sizing: border-box;
+        border-radius: 3rem 0 3rem 3rem;
+        display: grid;
+        grid-template-columns: .8fr 1fr;
+        gap: 2rem;
+      @include mobile{
+        grid-template-columns: 100%;
+        padding: 0;
+
+      }
+
+        &-img {
+            display: flex;
+            border-radius: 2rem;
+            overflow: hidden;
+            z-index: 1;
+            @include mobile{
+                height: 52rem;
+                transform: translateY(6rem);
+            }
+
+            & img {
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
+
+        &-right {
+            z-index: 2;
+            border: 2rem solid $red-dark;
+            border-radius: 3rem;
+            border-top: 1rem solid $red-dark;
+            border-bottom: 1rem solid $red-dark;
+            padding: 3rem;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: min-content;
+            gap: 2rem 9rem;
+            @include mobile{
+                grid-template-columns: 100%;
+                background-color: $white;
+            }
+
+            &-ttl {
+                margin-bottom: 2rem;
+                grid-column: 1 / span 2;
+
+                font-family: IBM Plex Sans;
+                font-size: 3.2rem;
+                font-weight: 500;
+                line-height: 110%;
+
+                @include mobile {
+                    font-size: 3.6rem;
+                    grid-column: 1;
+                }
+
+            }
+
+        }
+
+
+
+    }
+}

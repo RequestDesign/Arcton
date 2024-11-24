@@ -11,16 +11,17 @@
             position: relative;
             z-index: 1;
             height: 100%;
-           &::after{
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background-color: rgba(0, 0, 0, 0.2);
-           }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
 
             &-img {
                 position: absolute;
@@ -63,7 +64,8 @@
                     flex-direction: column;
                     gap: 2rem;
                     width: 60rem;
-                    @include mobile{
+
+                    @include mobile {
                         width: 100%;
                     }
                 }
@@ -72,4 +74,41 @@
         }
     }
 
+    &__tags {
+        position: absolute;
+        bottom: 2vh;
+        left: 60%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        z-index: 5;
+        width: 129rem;
+        gap: 2.4rem;
+        @include mobile{
+            width: 100%;
+            padding: 3rem;
+            left: 0;
+            bottom: 0;
+            transform: translate(0%, 61%);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+     
+    }
+
+    &._about {
+        position: relative;
+        padding-bottom: 7vh;
+        @include mobile{
+            margin-bottom: 47rem;
+        }
+
+        & .swiper-pagination {
+            left: 0;
+            transform: translateX(50%);
+            width: fit-content;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+    }
 }

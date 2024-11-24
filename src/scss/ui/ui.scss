@@ -18,4 +18,29 @@
         color: $red-dark;
     }
 }
+.bg{
+    &-wh{
+        background-color: $white !important;
+    }
+    &-bg{
+        background-color: $bg;
+    }
+}
 
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.4rem;
+    margin-bottom: 5rem;
+    @include mobile{
+        grid-template-columns: 100%;
+        gap: 5rem;
+    }
+    &+.btn-primary{
+        margin: auto;
+    }
+}
+.grid-c{
+    display: flex;
+    flex-direction: column;
+}

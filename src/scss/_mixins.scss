@@ -48,3 +48,15 @@
 @mixin vh100() {
   height: min(100vh, 100svh, 100dvh);
 }
+@mixin br(){
+  border-radius: 1.6rem;
+  @include mobile{
+    border-radius: 3rem;
+  }
+}
+@mixin brIn(){
+  border-radius: 1rem;
+  @include mobile{
+    border-radius: 2rem;
+  }
+}

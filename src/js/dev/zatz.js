@@ -219,6 +219,96 @@ function initSwipers() {
         })
     }
 
+    const projectsDetail = document.querySelector('.projects-detail')
+    if (projectsDetail) {
+        new Swiper(projectsDetail.querySelector('.swiper'), {
+            modules: [Pagination, Autoplay],
+            loop: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: projectsDetail.querySelector('.swiper-pagination'),
+                type: 'bullets'
+            },
+            on: {
+                init: (swiper) => {
+                    projectsDetail.classList.add('_swiper-autoplay')
+
+                },
+                autoplayStop: (swiper) => {
+                    projectsDetail.classList.remove('_swiper-autoplay')
+                }
+            }
+
+
+        })
+
+    }
+
+    const history = document.querySelector('.about.history')
+    if (history) {
+        new Swiper(history.querySelector('.swiper'), {
+            modules: [Navigation],
+            slidesPerView: 1,
+            navigation: {
+                prevEl: history.querySelector('.swiper-btn-prev'),
+                nextEl: history.querySelector('.swiper-btn-next')
+            }
+        })
+    }
+
+
+    const aboutAdv = document.querySelector('.about.advantages')
+    if (aboutAdv) {
+        new Swiper(aboutAdv.querySelector('.swiper'), {
+            modules: [Navigation],
+            slidesPerView: 1.3,
+            centeredSlides: true,
+            spaceBetween: rem(3),
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: false
+                }
+            },
+            navigation: {
+                prevEl: aboutAdv.querySelector('.swiper-btn-prev'),
+                nextEl: aboutAdv.querySelector('.swiper-btn-next')
+            }
+        })
+    }
+
+    const newsDetail = document.querySelector('.news-detail__body-right')
+    if (newsDetail) {
+        new Swiper(newsDetail.querySelector('.swiper'), {
+            modules: [Pagination, Autoplay],
+            loop: true,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            pagination: {
+                el: newsDetail.querySelector('.swiper-pagination'),
+                type: 'bullets'
+            },
+            on: {
+                init: (swiper) => {
+                    newsDetail.classList.add('_swiper-autoplay')
+
+                },
+                autoplayStop: (swiper) => {
+                    newsDetail.classList.remove('_swiper-autoplay')
+                }
+            }
+
+
+        })
+
+    }
 
 }
 function modalsHandler() {

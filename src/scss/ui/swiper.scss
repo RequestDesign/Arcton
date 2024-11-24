@@ -60,7 +60,8 @@
 
         &-active {
             width: 5rem;
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -89,14 +90,17 @@
 
 ._swiper-autoplay {
     & .swiper-pagination-bullet-active::after {
-animation: pagination 3s linear ;
+        animation: pagination 3s linear;
     }
 }
 
 
 @keyframes pagination {
-    0%{width: 0;}
-    100%{
+    0% {
+        width: 0;
+    }
+
+    100% {
         width: 100%;
     }
 }

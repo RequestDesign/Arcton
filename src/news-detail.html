@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news detail</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html" data-props='{
+            ".header__c-services":{
+                "class":"bg-wh"
+            }
+        }'></include>
+        <main>
+            <section class="news-detail">
+                <div class="container ">
+                    <span class="news-detail__date txt18">
+                        12.12.2012
+                    </span>
+                    <p class="tl1">
+                        В Саратовской области после ремонта открыто движение по мосту через реку Малый Иргиз
+                    </p>
+                    <div class="news-detail__body">
+                        <div class="news-detail__body-left  txt22">
+                            <p>just text <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit tempora
+                                dolorem dolores adipisci! Iusto expedita ipsa exercitationem cupiditate adipisci?</p>
+                            <ul>
+                                <li>marked list</li>
+                                <li>marked list</li>
+                                <li>marked list</li>
+                            </ul>
+                            <p class="col-red txt22 _bold"> red text</p>
+                        </div>
+                        <div class="news-detail__body-right">
+                            <div class="projects-detail__c-body-right-swiper">
+                                <div class="swiper">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide">
+                                            <img src="./assets/images/image.png" alt="">
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <img src="./assets/images/image.png" alt="">
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <img src="./assets/images/image.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-pagination _footer bg-wh">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--  -->
+            <section class="news-detail another">
+                <div class="container">
+                    <p class="tl1">Другие новости</p>
+                    <ul class="news__grid">
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

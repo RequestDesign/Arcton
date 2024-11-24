@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <main>
+            <section class="news">
+                <div class="container">
+                    <p class="tl1">Новости</p>
+
+                    <ul class="news__grid">
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                        <li>
+                            <include src="./components/_news-card.html"></include>
+                        </li>
+                    </ul>
+
+                    <button class="btn-primary">
+                        загрузить еще
+                        <span class="btn-primary-arrow"></span>
+                    </button>
+
+                </div>
+
+            </section>
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+
+</body>
+
+</html>

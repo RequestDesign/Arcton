@@ -45,7 +45,7 @@
             padding: 0;
         }
 
-        & a {
+        &-e {
             background-color: $bg;
             border-radius: 3rem;
             position: relative;
@@ -134,7 +134,9 @@
             width: 100%;
             font-weight: 500;
             transition: width .2s linear;
-
+            @include mobile{
+                height: 8rem;
+            }
             &::after {
                 position: absolute;
                 z-index: 1;
@@ -150,7 +152,11 @@
                 height: 4.6rem;
                 border-radius: 50%;
                 transition: width .2s linear, border-radius .2s linear;
-
+                @include mobile{
+               
+                    width: 8rem;
+                    height: 8rem;
+                }
             }
 
             & .txt18 {

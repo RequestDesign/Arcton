@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contacts</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html" data-props='{
+            ".header__c-services":{
+                "class":"bg-wh"
+            }
+        }'></include>
+        <main>
+            <section class="contacts">
+                <div class="container">
+                    <p class="tl1"> Контакты</p>
+                    <ul class="contacts__list">
+                        <li class="contacts__list-e">
+                            <a class="txt18" href="tel:+71488228">
+                                <img src="./assets/images/icons/phone.svg" alt="">
+                                +7 777 777 77 77
+                            </a>
+                        </li>
+                        <li class="contacts__list-e">
+                            <a class="txt18" href="mailto:+71488228">
+                                <img src="./assets/images/icons/mail.svg" alt="">
+                                info.arkton@mail.ru
+                            </a>
+                        </li>
+                        <li class="contacts__list-e">
+                            <a class="txt18" href="#yandexmap">
+                                <img src="./assets/images/icons/geo.svg" alt="">
+                                Москва, 2-я Звенигородская, 13 с15,этаж 4, пом. Х, ком.1
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="contacts__map" id="map">
+
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <include src="./components/_request-form.html"></include>
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU"
+        type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [47.204572074287015, 39.67028549999995],
+                zoom: 16,
+                controls: ['fullscreenControl']
+            });
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'there is no palce for narkomany 😎'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: './assets/images/icons/map-marker.svg',
+                iconImageSize: [300, 130],
+
+            }),
+                myMap.geoObjects
+                    .add(myPlacemark)
+        }
+    </script>
+</body>
+
+</html>

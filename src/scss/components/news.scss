@@ -1,0 +1,28 @@
+.news {
+    margin-bottom: $sectionGap;
+    @include mobile{
+        margin-top: 25rem;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        & .btn-primary{
+            margin: auto;
+        }
+        
+        
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 2.4rem;
+        @include mobile{
+            grid-template-columns: 100%;
+            gap: 8rem;
+        
+        }
+
+    }
+}

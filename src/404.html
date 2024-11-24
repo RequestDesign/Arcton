@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contacts</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html" data-props='{
+            ".header__c-services":{
+                "class":"bg-wh"
+            }
+        }'></include>
+        <main class="not-found-main">
+            <section class="not-found">
+                <div class="container not-found__c">
+                    <p class="not-found__c-code">404</p>
+                    <p class="not-found__c-codename">Страница не найдена</p>
+
+                    <a class="btn-primary">
+                        На главную
+                        <span class="btn-primary-arrow"></span>
+                    </a>
+
+                </div>
+            </section>
+            <!--  -->
+          
+        </main>
+        <include src="./components/_footer.html"></include>
+    </div>
+
+</body>
+
+</html>

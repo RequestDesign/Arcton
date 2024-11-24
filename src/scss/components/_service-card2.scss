@@ -1,0 +1,21 @@
+.service-card2 {
+    height: 46rem;
+    display: flex;
+    flex-direction: column;
+    @include br;
+    background-color: $white;
+    gap: 2.4rem;
+    padding: 2rem;
+
+    &__img {
+        display: flex;
+        height: 32rem;
+        @include brIn;
+        overflow: hidden;
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
