@@ -2,70 +2,130 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>news</title>
 
-  <title>я тут</title>
 <script defer src="js/main.js"></script><link href="css/270.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"></head>
 
 <body>
-  <div class="wrapper">
-    <main>
-      <a class="tl3" href="https://www.figma.com/design/5b0F0MpqtEgOrFL4RrDXtk/%D0%90%D1%80%D0%BA%D1%82%D0%BE%D0%BD?node-id=0-1&node-type=canvas&t=ZVNphmQ88NGbtB1Q-0">figma</a>
+    <div class="wrapper">
+        <header class="header">
+    <div class="container header__c drop-down-container">
+        <a href="#" class="header__c-logo">
+            <img src="../assets/images/icons/logo-red.svg" alt="logo">
+        </a>
+        <button class="mobile header__c-opener drop-down-target" data-lock="y">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="header__c-nav">
+            <div class="header__c-nav-list txt18 _bold">
+                <a href="#">О компании</a>
+                <a href="#">О компании</a>
+                <a href="#">О компании</a>
+                <a href="#">О компании</a>
+                <a href="#">О компании</a>
+                <a href="#" class="mobile">направления деятельности</a>
+                <div class="mobile">
+                    <a href="tel:+71488228">
+                        <img src="./assets/images/icons/phone-dark.svg" alt="p">
+                        +7 777 777 77 77
+                    </a>
+                    <a href="tel:+71488228">
+                        <img src="./assets/images/icons/geo-dark.svg" alt="p">
+                        г. Санкт-Петербург, ул. Бабушкина, д.3
+                    </a>
 
-      <ol>
-        <li>
-          <a href="./main.html" class="tl2">Главная</a>
-        </li>
-        <li>
-          <a href="./projects.html" class="tl2">проекты </a>
-        </li>
-        <li>
-          <a href="./projects-details.html" class="tl2">проекты детальная</a>
-        </li>
-        <li>
-          <a href="./about.html" class="tl2">о компании</a>
-        </li>
-        <li>
-          <a href="./news.html" class="tl2">новости</a>
-        </li>
-        <li>
-          <a href="./news-detail.html" class="tl2">новости детальная</a>
-        </li>
-        <li>
-          <a href="./contacts.html" class="tl2">контакты</a>
-        </li>
-        <li>
-          <a href="./services.html" class="tl2">услуги</a>
-        </li>
-        <li>
-          <!-- нахуя? не понятно -->
-          <a href="./service2.html" class="tl2">Направления деятельности</a>
-        </li>
-        <li>
-          <a href="./404.html" class="tl2">404</a>
-        </li>
+                </div>
+            </div>
+        </nav>
+        <a href="#" class="header__c-services desktop txt18">Направления деятельности</a>
        
+    </div>
+</header>
+        <main>
+            <section class="news">
+                <div class="container">
+                    <p class="tl1">Новости</p>
 
-      </ol>
-      <ul>
+                    <ul class="news__grid">
+                        <li>
+                            <a href="" class="news-card">
+    <div class="news-card-img">
+        <img src="./assets/images/image.webp" alt="">
+    </div>
+    <span class="news-card-date  txt18">
+        12.12.2012
+    </span>
+    <p class=" tl3">
+        news name  3 row max 
+    </p>
+    <p class="txt18">
+        news body  3 row max 
+        </p>
+    <span class="news-card-link ">
+        <span class="txt18">
+            Подробнее
+        </span>
+    </span>
+</a>
+                        </li>
+                        <li>
+                            <a href="" class="news-card">
+    <div class="news-card-img">
+        <img src="./assets/images/image.webp" alt="">
+    </div>
+    <span class="news-card-date  txt18">
+        12.12.2012
+    </span>
+    <p class=" tl3">
+        news name  3 row max 
+    </p>
+    <p class="txt18">
+        news body  3 row max 
+        </p>
+    <span class="news-card-link ">
+        <span class="txt18">
+            Подробнее
+        </span>
+    </span>
+</a>
+                        </li>
+                        <li>
+                            <a href="" class="news-card">
+    <div class="news-card-img">
+        <img src="./assets/images/image.webp" alt="">
+    </div>
+    <span class="news-card-date  txt18">
+        12.12.2012
+    </span>
+    <p class=" tl3">
+        news name  3 row max 
+    </p>
+    <p class="txt18">
+        news body  3 row max 
+        </p>
+    <span class="news-card-link ">
+        <span class="txt18">
+            Подробнее
+        </span>
+    </span>
+</a>
+                        </li>
+                    </ul>
 
-        <button class="btn-primary modal-opener" data-modal="request">
-          modal request
-          <span class="btn-primary-arrow"></span>
-        </button>
-        <button class="btn-primary modal-opener" data-modal="success">
-          modal success
-          <span class="btn-primary-arrow"></span>
-        </button>
-        <a href="./ui.html" class="tl3">ui</a>
-      </ul>
+                    <button class="btn-primary">
+                        загрузить еще
+                        <span class="btn-primary-arrow"></span>
+                    </button>
 
+                </div>
 
-      </ol>
-
-    </main>
-    <div class="modal modal-request ">
+            </section>
+        </main>
+        <div class="modal modal-request ">
     <div class="modal-main  modal-closer">
         <div class="modal-c-wrp">
             <div class="modal__c _request">
@@ -185,109 +245,9 @@
 
     </div>
 </footer>
-  </div>
+    </div>
 
-  <style>
-    @charset "UTF-8";
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
-    * {
-      padding: 0;
-      margin: 0;
-      border: 0;
-      box-sizing: border-box;
-    }
-    footer{
-      display: none;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      /* min-width: 32rem; */
-      background: #eeeef0;
-      color: #191817;
-      display: flex;
-      justify-content: center;
-    }
-
-    html {
-      font-size: 0.5208335vw;
-    }
-
-    body {
-      padding: 5rem 0;
-      font-family: 'Source Code Pro';
-      font-size: 100%;
-      line-height: 1;
-      font-size: 2.5rem;
-      user-select: none;
-    }
-
-    ul,
-    ol {
-      margin-bottom: 10rem;
-    }
-
-    ul li,
-    ol li {
-      font-size: 2.3rem;
-    }
-
-    li {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    a {
-      color: #191817;
-      transition: color 0.5s ease;
-    }
-
-    a:visited {
-      text-decoration: none;
-      color: #191817;
-    }
-
-    a:hover {
-      color: #191817;
-      text-decoration: underline;
-    }
-
-    h1 {
-      margin-bottom: 5rem;
-      font-size: 5rem;
-      font-weight: 300;
-      text-align: center;
-    }
-
-    h2 {
-      margin-bottom: 2.5rem;
-      font-size: 2.5rem;
-      font-weight: 300;
-    }
-
-    .root {
-      padding: 5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media (max-width: 48em) {
-      html {
-        font-size: 1.5625vw;
-      }
-    }
-  </style>
 </body>
 
 </html>
