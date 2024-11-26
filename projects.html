@@ -29,7 +29,7 @@
                 <a href="#">О компании</a>
                 <a href="#">О компании</a>
                 <a href="#" class="mobile">направления деятельности</a>
-                <div class="mobile">
+                <div class="mobile header__c-nav-list-social">
                     <a href="tel:+71488228">
                         <img src="./assets/images/icons/phone-dark.svg" alt="p">
                         +7 777 777 77 77
@@ -50,76 +50,84 @@
 </header>
         <main>
             <section class="heading">
-                <div class="heading__c swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.webp" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
+    <div class="heading__c swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide heading__c-slide">
+          <div class="heading__c-slide-img">
+            <img src="./assets/images/image.webp" alt="">
+          </div>
+          <div class="container heading__c-slide-body">
+            <div class="heading__c-slide-body-top">
 
-                                    <span class="txtBig col-wh">
-                                        Ваш надежный партнер в строительстве
-                                        <a href="#" class="btn-primary">
-                                            Оставить заявку
-                                            <span class="btn-primary-arrow"></span>
-                                        </a>
-                                    </span>
-                                </div>
-                                <div class="heading__c-slide-body-bottom col-wh">
-                                    <p class="tl2">Доверьтесь нам!</p>
-                                    <p class="txt22 _bold">
-                                        Специализируемся на предоставлении полного спектра услуг в области
-                                        строительства, реконструкции и
-                                        капитального ремонта
-                                    </p>
-                                </div>
-                            </div>
+              <span class="txtBig col-wh">
+                Ваш надежный партнер в строительстве
+                <button class="btn-primary modal-opener" data-modal="request">
+                 <span class="btn-primary-text"> Оставить заявку</span>
+                  <span class="btn-primary-arrow"></span>
+                </button>
+              </span>
+            </div>
+            <div class="heading__c-slide-body-bottom col-wh">
+              <p class="tl2">Доверьтесь нам!</p>
+              <p class="txt22 _bold">
+                Специализируемся на предоставлении полного спектра услуг в области строительства, реконструкции и
+                капитального ремонта
+              </p>
+            </div>
+          </div>
 
-                        </li>
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.webp" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
+        </li>
+        <li class="swiper-slide heading__c-slide">
+          <div class="heading__c-slide-img">
+            <img src="./assets/images/image.webp" alt="">
+          </div>
+          <div class="container heading__c-slide-body">
+            <div class="heading__c-slide-body-top">
 
-                                    <p class="txtBig">
-                                        слайд 2
-                                    </p>
-                                </div>
-                                <div class="heading__c-slide-body-bootom">
-                                    <p class="tl2">слайд 2 еще раз</p>
+              <p class="txtBig">
+                слайд 2
+              </p>
+            </div>
+            <div class="heading__c-slide-body-bootom">
+              <p class="tl2">слайд 2 еще раз</p>
 
-                                </div>
-                            </div>
+            </div>
+          </div>
 
-                        </li>
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.webp" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
+        </li>
+        <li class="swiper-slide heading__c-slide">
+          <div class="heading__c-slide-img">
+            <img src="./assets/images/image.webp" alt="">
+          </div>
+          <div class="container heading__c-slide-body">
+            <div class="heading__c-slide-body-top">
 
-                                    <p class="txtBig">
-                                        слайд 3
-                                    </p>
-                                </div>
-                                <div class="heading__c-slide-body-bootom">
-                                    <p class="tl2">слайд 3 еще раз</p>
+              <p class="txtBig">
+                слайд 3
+              </p>
+            </div>
+            <div class="heading__c-slide-body-bootom">
+              <p class="tl2">слайд 3 еще раз</p>
 
-                                </div>
-                            </div>
+            </div>
+          </div>
 
-                        </li>
-                    </ul>
-                    <div class="swiper-pagination _overlay">
+        </li>
+      </ul>
+      <div class="heading__c-footer">
+        <div class="heading__c-footer-c ui-pagination-angle _bg">
+          <div class="swiper-pagination ">
+          </div>
+          <span class="ui-pagination-angle-line _right"></span>
+          <!--  <span class="ui-pagination-angle-round _right"></span> -->
+          <span class="ui-pagination-angle-line _left"></span>
+          <!--    <span class="ui-pagination-angle-round _left"></span> -->
 
-                    </div>
-                </div>
-            </section>
+        </div>
+      </div>
+
+    </div>
+  </section>
             <!--  -->
             <section class="projects">
                 <div class="container">
@@ -140,49 +148,68 @@
                                 <ul>
                                     <li>
                                         <a href="" class="project-card btn-link-overlay">
-    <div class="project-card__date tl2 col-red">
-        <span>2022</span>
-        <span>-2024</span>
-    </div>
+    <div class="project-card__date tl2 col-red"><span class="_solo">2024</span></div>
+    <span class="project-card__round _left"></span>
+    <span class="project-card__round _right"></span>
     <div class="project-card__img">
         <img src="./assets/images/image.webp" alt="">
     </div>
     <div class="txt22 project-card__text txt22 _bold">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quasi.</p>
-        <span href="#" class="btn-link ">
-        </span>
+        <div class="project-card__text-body">
+            <p class="project-card__text-body-data">project card name two row</p>
+            <span class="btn-link  ">
+            </span>
+            <span class="project-card__text-body-bg"></span>
+        </div>
+       
     </div>
 </a>
                                     </li>
                                     <li>
                                         <a href="" class="project-card btn-link-overlay">
     <div class="project-card__date tl2 col-red">
+        <!-- если нужна 1 дата, добавь класс _solo для спана
+         ну и спан, понятное дело, должен быть один -->
         <span>2022</span>
         <span>-2024</span>
     </div>
+    <span class="project-card__round _left"></span>
+    <span class="project-card__round _right"></span>
     <div class="project-card__img">
         <img src="./assets/images/image.webp" alt="">
     </div>
     <div class="txt22 project-card__text txt22 _bold">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quasi.</p>
-        <span href="#" class="btn-link ">
-        </span>
+        <div class="project-card__text-body">
+            <p class="project-card__text-body-data">project card name two row</p>
+            <span class="btn-link  ">
+            </span>
+            <span class="project-card__text-body-bg"></span>
+        </div>
+       
     </div>
 </a>
                                     </li>
                                     <li>
                                         <a href="" class="project-card btn-link-overlay">
     <div class="project-card__date tl2 col-red">
+        <!-- если нужна 1 дата, добавь класс _solo для спана
+         ну и спан, понятное дело, должен быть один -->
         <span>2022</span>
         <span>-2024</span>
     </div>
+    <span class="project-card__round _left"></span>
+    <span class="project-card__round _right"></span>
     <div class="project-card__img">
         <img src="./assets/images/image.webp" alt="">
     </div>
     <div class="txt22 project-card__text txt22 _bold">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quasi.</p>
-        <span href="#" class="btn-link ">
-        </span>
+        <div class="project-card__text-body">
+            <p class="project-card__text-body-data">project card name two row</p>
+            <span class="btn-link  ">
+            </span>
+            <span class="project-card__text-body-bg"></span>
+        </div>
+       
     </div>
 </a>
                                     </li>
@@ -194,16 +221,24 @@
                                     <li>
                                         <a href="" class="project-card btn-link-overlay">
     <div class="project-card__date tl2 col-red">
+        <!-- если нужна 1 дата, добавь класс _solo для спана
+         ну и спан, понятное дело, должен быть один -->
         <span>2022</span>
         <span>-2024</span>
     </div>
+    <span class="project-card__round _left"></span>
+    <span class="project-card__round _right"></span>
     <div class="project-card__img">
         <img src="./assets/images/image.webp" alt="">
     </div>
     <div class="txt22 project-card__text txt22 _bold">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, quasi.</p>
-        <span href="#" class="btn-link ">
-        </span>
+        <div class="project-card__text-body">
+            <p class="project-card__text-body-data">project card name two row</p>
+            <span class="btn-link  ">
+            </span>
+            <span class="project-card__text-body-bg"></span>
+        </div>
+       
     </div>
 </a>
                                     </li>
@@ -214,7 +249,9 @@
                     </div>
 
                     <button class="btn-primary">
-                        Загрузить ещё
+                        <span class="btn-primary-text">
+                            Загрузить еще
+                        </span>
                         <span class="btn-primary-arrow"></span>
                     </button>
 
@@ -269,7 +306,9 @@
 
 
                 <button class="btn-primary">
-                    Отправить
+                    <span class="btn-primary-text">
+                       Отправить
+                    </span>
                     <span class="btn-primary-arrow"></span>
                 </button>
 
@@ -284,11 +323,18 @@
 </section>
         </main>
         <div class="modal modal-request ">
-    <div class="modal-main  modal-closer">
-        <div class="modal-c-wrp">
+    <div class="modal-main  ">
+        <div class="modal-c-wrp modal-closer">
             <div class="modal__c _request">
-                <button class="modal__c-close modal-closer">
-                </button>
+                <div class="modal__c-closer   ui-bottom-angle _wh _left">
+                    <button class="modal__c-close modal-closer"></button>
+                    <!--  -->
+                    <span class="ui-bottom-angle-line _left"></span>
+                    <span class="ui-bottom-angle-round _left"></span>
+                 
+                </div>
+              
+                
                 <p class="tl1 ">
                     Давайте сотрудничать
                 </p>
@@ -323,7 +369,9 @@
 
 
                         <button class="btn-primary">
-                            Отправить
+                            <span class="btn-primary-text">
+                                Отправить
+                            </span>
                             <span class="btn-primary-arrow"></span>
                         </button>
                     </div>
@@ -337,11 +385,16 @@
     </div>
 </div>
 <div class="modal modal-success ">
-    <div class="modal-main  modal-closer">
-        <div class="modal-c-wrp">
+    <div class="modal-main  ">
+        <div class="modal-c-wrp modal-closer">
             <div class="modal__c _success">
-                <button class="modal__c-close modal-closer">
-                </button>
+                <div class="modal__c-closer  ui-bottom-angle _wh _left">
+                    <button class="modal__c-close modal-closer"></button>
+                    <!--  -->
+                    <span class="ui-bottom-angle-line _left"></span>
+                    <span class="ui-bottom-angle-round _left"></span>
+                 
+                </div>
                 <p class="tl1 ">
                     Заявка отправлена
                 </p>
@@ -349,7 +402,9 @@
                     В ближайшее время с Вами свяжется наш менеджер
                 </p>
                 <a href="#" class="btn-primary">
-                    На главную
+                    <span class="btn-primary-text">
+                       На главную
+                    </span>
                     <span class="btn-primary-arrow"></span>
                 </a>
 
