@@ -1,28 +1,39 @@
 .projects {
-    & .container{
+    & .container {
         display: flex;
         flex-direction: column;
         gap: 5rem;
     }
-    & .btn-primary{
+
+    & .btn-primary {
         margin: auto;
     }
 
     &__top {
-      
+
         display: flex;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            gap: 3rem;
+        }
 
         &-btns {
             background-color: $white;
             border-radius: 10rem;
             overflow: hidden;
+            @include mobile{
+               
+                display: flex;
+                text-align: center;
+            }
 
             & button {
                 border-radius: 10rem;
                 padding: 2.4rem;
                 box-sizing: border-box;
-                &._opened{
+
+                &._opened {
                     background-color: $red-dark;
                     color: $white;
                 }
@@ -44,14 +55,19 @@
 
     & .switcher-slide {
         flex-shrink: 0;
-            width: 100%;
+        width: 100%;
+
         & ul {
 
-            
+
             height: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2.4rem;
+
+            @include mobile {
+                grid-template-columns: 100%;
+            }
         }
     }
 }

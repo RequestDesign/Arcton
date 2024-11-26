@@ -24,7 +24,7 @@
     &-main {
 
         background-color: rgba(191, 183, 183, 0.1);
-        backdrop-filter: 1rem;
+        backdrop-filter: blur(1rem);
         -webkit-backdrop-filter: 1rem;
         width: 100vw;
         min-height: 100vh;
@@ -59,6 +59,37 @@
         @include mobile {
             width: 100%;
             padding: 4rem 3rem;
+            margin: 0 2rem;
+        }
+
+        &-closer {
+            position: absolute;
+            right: -0rem;
+            top: -5.6rem;
+            z-index: 10;
+
+            &.ui-bottom-angle._left .ui-bottom-angle-round._left {
+                left: -4.5rem;
+                bottom: 1.5rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #ffffff 51%);
+                background-size: 16rem 15rem;
+                background-position: 61% 54%;
+                background-repeat: no-repeat;
+                transform: translateX(-50%);
+                clip-path: polygon(50% 53%, 100% 58%, 100% 100%, 49% 100%);
+
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            &.ui-bottom-angle._left .ui-bottom-angle-line._left {
+                display: none;
+            }
+           @include mobile{
+            border-radius: 50% 50% 0 0;
+           }
         }
 
 
@@ -68,18 +99,15 @@
             justify-content: center;
             width: 5.6rem;
             height: 5.6rem;
-            position: absolute;
-            right: -0rem;
-            top: -5.6rem;
-            z-index: 10;
+
             background-image: url(../assets/images/icons/x.svg);
-            background-size: 1.4rem;
+            background-size: 50%;
             background-position: center;
             background-repeat: no-repeat;
             background-color: $gray;
             border-radius: 50%;
-            border: 10px solid $white;
-            border-radius: 50% 50% 0 0;
+
+            border-radius: 50%;
 
 
 
@@ -87,10 +115,11 @@
                 width: 6.4rem;
                 height: 6.4rem;
                 margin-bottom: 4rem;
-                background-size: 100%;
 
 
             }
+
+
         }
 
         &._request {

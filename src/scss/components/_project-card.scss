@@ -9,36 +9,92 @@
         height: 64rem;
     }
 
+    @include hover {
+        & .project-card__text-body-bg {
+            scale: 35;
+        }
+
+        & .project-card__text-body-data {
+            background-position: 100%;
+        }
+    }
+
+    &__round {
+        position: absolute;
+        display: block;
+        background-color: red;
+        width: 5rem;
+        height: 5rem;
+        background: rgb(249, 13, 5);
+        background: radial-gradient(circle, transparent 49%, $bg 51%);
+        background-size: 12rem 13rem;
+        background-position: 30% 29%;
+        background-repeat: no-repeat;
+
+        &._left {
+            top: 0;
+            left: 15rem;
+        }
+
+        &._right {
+            top: 11rem;
+            left: 0;
+        }
+    }
+
     &__date {
         position: absolute;
         top: 0;
         left: 0;
-        padding:0  2rem 2rem 0;
+        padding: 0 2rem 2rem 0;
         box-sizing: border-box;
-        border-radius: 0 0 3rem 0 ;
+        border-radius: 0 0 3rem 0;
         background-color: $bg;
         display: flex;
         flex-direction: column;
-        & span+span{
-           margin-left: 2rem; 
+        align-items: center;
+        justify-content: center;
+        height: 11rem;
+        width: 15rem;
+
+        @include mobile {
+
+            font-size: 4.6rem;
+        }
+
+        & span+span {
+            margin-left: 2rem;
+        }
+
+
+        & ._solo {
+            font-size: 5.4rem;
+
+            @include mobile {
+                font-size: 6rem;
+            }
         }
 
     }
-    &__img{
+
+    &__img {
         width: 100%;
         height: 100%;
         display: flex;
         border-radius: 3rem;
         overflow: hidden;
-        @include mobile{
-            border-radius: 3rem 3rem 0 0 ;
+
+        @include mobile {
+            border-radius: 3rem 3rem 0 0;
         }
-        & img{
-             object-fit: cover;
-             object-position: center;
+
+        & img {
+            object-fit: cover;
+            object-position: center;
         }
     }
-    &__text{
+
+    &__text {
         position: absolute;
         bottom: 2rem;
         left: 2rem;
@@ -49,12 +105,88 @@
         gap: 4rem;
         background-color: $white;
         border-radius: 3rem;
-        @include mobile{
+        overflow: hidden;
+
+        @include mobile {
             position: relative;
             width: 100%;
             left: 0;
             top: 0;
             border-radius: 0 0 3rem 3rem;
+            overflow: unset;
+        }
+
+        &-body {
+            width: 100%;
+            height: 100%;
+            height: 6rem;
+            position: relative;
+            display: flex;
+
+            @include mobile {
+                height: auto;
+            }
+
+            &-data {
+
+                width: 90%;
+
+                @include desktop {
+                    @include wrap-text(2);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                z-index: 3;
+                color: $black;
+                background: linear-gradient(90deg, $black 49%, rgb(255, 255, 255) 49%);
+                background-size: 200%;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                transition: background-position .3s linear;
+                background-repeat: no-repeat;
+
+            }
+
+            & .btn-link {
+                margin-left: auto;
+                position: relative;
+                z-index: 2;
+
+            }
+
+            &-bg {
+                position: absolute;
+                z-index: 1;
+                right: .5rem;
+                top: .5rem;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                background-color: $red-dark;
+                transition: scale .3s linear;
+
+            }
+
+        }
+
+        &-link {
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: red;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transition: scale .5s linear;
+            }
         }
     }
 }

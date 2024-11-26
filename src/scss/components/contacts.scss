@@ -2,7 +2,7 @@
     margin-top: $sectionGap;
 
     @include mobile {
-        margin-top: 35rem;
+       
     }
 
     & .container {
@@ -40,6 +40,7 @@
             & a {
                 display: flex;
                 gap: 1rem;
+                align-items: center;
 
                 & img {
                     flex-shrink: 0;

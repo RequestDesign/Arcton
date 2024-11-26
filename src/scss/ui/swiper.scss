@@ -34,6 +34,11 @@
 
 .swiper-pagination {
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: auto;
+    width: fit-content;
 
     &._overlay {
         position: absolute;
@@ -45,9 +50,7 @@
         border-radius: 3rem 3rem 0 0;
         padding: 2rem;
         width: 50rem;
-        display: flex;
-        justify-content: center;
-        gap: 1.2rem;
+       
     }
 
     & .swiper-pagination-bullet {
@@ -80,9 +83,7 @@
         border-radius: 3rem 3rem 0 0;
         padding: 1rem;
         width: 50rem;
-        display: flex;
-        justify-content: center;
-        gap: 1.2rem;
+   
         width: 100%;
         border-radius: 0 0 3rem 3rem;
     }

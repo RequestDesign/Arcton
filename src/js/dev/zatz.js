@@ -93,7 +93,8 @@ function initSwipers() {
             breakpoints: {
                 768: {
                     centeredSlides: false,
-                    slidesPerView: 3
+                    slidesPerView: 3,
+                    spaceBetween: rem(3),
                 }
             },
             navigation: {
@@ -186,7 +187,7 @@ function initSwipers() {
         new Swiper(projectsComplited.querySelector('.swiper'), {
             modules: [Navigation],
             slidesPerView: 1.2,
-            spaceBetween: rem(2),
+            spaceBetween: rem(3),
             centeredSlides: true,
             breakpoints: {
                 768: {

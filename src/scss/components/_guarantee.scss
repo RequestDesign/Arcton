@@ -1,29 +1,32 @@
 .guarantee {
+    margin-top: 10rem;
+
+    &+section {
+        margin-top: 10rem;
+    }
 
     & .container {}
 
     &__body {
-        margin-top: 5rem;
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-auto-rows: auto;
+
         gap: 3.6rem;
         background-color: $white;
         border: 2.4rem solid $red-dark;
-        border-radius: 3rem;
+        border-radius: 5rem;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 3rem;
 
-        @include mobile {
-            background-color: $red-dark;
-            grid-template-columns: 100%;
-            gap: 0;
-
-        }
+        
 
         &-left {
             display: flex;
             flex-direction: column;
             gap: 3rem;
             padding: 3rem;
+            @include brIn;
 
             @include mobile {
                 background-color: $white;
@@ -47,10 +50,7 @@
             }
         }
 
-        &-text {
-            max-width: 82rem;
-
-        }
+       
 
         & .txt18 {}
     }

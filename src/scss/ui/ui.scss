@@ -6,41 +6,470 @@
 @import './swiper';
 
 
-.col{
+.col {
 
-    &-gray{
+    &-gray {
         color: rgba(255, 255, 255, 0.8);
     }
-    &-wh{
+
+    &-wh {
         color: $white;
     }
-    &-red{
+
+    &-red {
         color: $red-dark;
     }
+
+    &-black {
+        color: $black;
+    }
 }
-.bg{
-    &-wh{
+
+.bg {
+    &-wh {
         background-color: $white !important;
     }
-    &-bg{
+
+    &-bg {
         background-color: $bg;
     }
 }
 
-.grid-3{
+.grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.4rem;
     margin-bottom: 5rem;
-    @include mobile{
+
+    @include mobile {
         grid-template-columns: 100%;
         gap: 5rem;
     }
-    &+.btn-primary{
+
+    &+.btn-primary {
         margin: auto;
     }
 }
-.grid-c{
+
+.grid-c {
     display: flex;
     flex-direction: column;
+}
+
+
+/* .ui-angle {
+    position: absolute;
+    top: -14%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+
+    &._right {
+        right: -4.9rem;
+        width: 5rem;
+        background-color: $bg;
+        clip-path: polygon(0 0, 0 100%, 100% 0);
+
+
+    }
+
+    &-round {
+        position: absolute;
+        right: -10rem;
+        top: 0;
+        width: 7rem;
+        height: 7rem;
+        background: rgb(86, 255, 0);
+        background: radial-gradient(circle, rgba(86, 255, 0, 0) 50%, $bg 50%);
+        background-size: cover;
+        z-index: 3;
+        background-size: 16rem 15rem;
+        background-position: 33% 31%;
+        background-repeat: no-repeat;
+
+    }
+
+    &._left {
+        left: -5rem;
+        width: 5rem;
+        background-color: $bg;
+        clip-path: polygon(0 0, 100% 100%, 100% 0);
+    }
+
+    &s {
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+        background-color: $bg;
+        position: relative;
+        z-index: 3;
+        border-radius: 0 0 3rem 0;
+
+    }
+} */
+
+.ui-heading-angle {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    border-radius: 0 0 3rem 0;
+
+    @include mobile {
+        background-color: transparent !important;
+        padding-top: 8rem !important;
+    }
+
+    &._bg {
+        background-color: $bg;
+
+
+        & .ui-heading-angle-line {
+            background-color: $bg;
+
+        }
+
+        & .ui-heading-angle-round {
+            background: rgb(86, 255, 0);
+            background: radial-gradient(circle, rgba(86, 255, 0, 0) 50%, $bg 51%);
+            background-size: 13rem 9rem;
+            background-position: 49% 23%;
+            background-repeat: no-repeat;
+            clip-path: polygon(0 0, 56% 0, 60% 70%, 0 70%);
+        }
+    }
+
+    &._wh {
+        background-color: $white;
+
+        & .ui-heading-angle-line {
+            background-color: $white;
+
+        }
+
+        & .ui-heading-angle-round {
+            background: rgb(86, 255, 0);
+            background: radial-gradient(circle, rgba(86, 255, 0, 0) 50%, $white 51%);
+            background-size: 13rem 9rem;
+            background-position: 49% 23%;
+            background-repeat: no-repeat;
+            clip-path: polygon(0 0, 56% 0, 60% 70%, 0 70%);
+        }
+    }
+
+    &-line {
+        position: absolute;
+        top: -14%;
+        height: 100%;
+        display: block;
+        z-index: 2;
+
+        @include mobile {
+            display: none;
+        }
+
+        &._right {
+            right: -4.8rem;
+            width: 5rem;
+            clip-path: polygon(0 0, 0 100%, 100% 0);
+
+
+        }
+
+        &._left {
+            top: 0;
+            height: 100%;
+            left: 0;
+            width: 100vw;
+            transform: translateX(-100%);
+        }
+    }
+
+
+    &-round {
+        position: absolute;
+        right: -10rem;
+        top: 0;
+        width: 7rem;
+        height: 7rem;
+
+        background-size: cover;
+        z-index: 3;
+
+        @include mobile {
+            display: none;
+        }
+
+    }
+
+
+
+}
+
+
+.ui-bottom-angle {
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    border-radius: 3rem 3rem 0 0;
+
+    &._bg {
+        background-color: $bg;
+        @include mobile{
+            border-radius: 6rem 6rem 0 0 ;
+        }
+
+        & .ui-bottom-angle-line {
+            background-color: $bg;
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+        & .ui-bottom-angle-round {
+            &._left {
+                left: -5.6rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                background-size: 20rem 20rem;
+                background-position: 65% 71%;
+                background-repeat: no-repeat;
+                transform: translateX(-50%);
+                clip-path: polygon(21% 0, 100% 1%, 100% 100%, 20% 100%);
+                @include mobile{
+                    left: -3.9rem;
+                    background: rgb(86, 255, 0);
+                    background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                    background-size: 20rem 15rem;
+                    background-position: 86% 83%;
+                    background-repeat: no-repeat;
+                    transform: translateX(-40%);
+                    clip-path: polygon(76% 35%, 80% 2%, 80% 100%, 0 100%);
+                }
+            }
+
+            &._right {
+                right: -5.6rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                background-size: 20rem 20rem;
+                background-position: 35% 71%;
+                background-repeat: no-repeat;
+                transform: translateX(50%);
+                clip-path: polygon(0 0, 80% 2%, 80% 100%, 0 100%);
+                @include mobile{
+                    right: -3.9rem;
+                    background: rgb(86, 255, 0);
+                    background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                    background-size: 20rem 15rem;
+                    background-position: 25% 84%;
+                    background-repeat: no-repeat;
+                    transform: translateX(50%);
+                    clip-path: polygon(0% 32%, 80% 2%, 80% 100%, 0 100%);
+                }
+            }
+        }
+    }
+
+    &._wh {
+        background-color: $white;
+
+        & .ui-bottom-angle-line {
+            background-color: $white;
+
+        }
+
+        & .ui-bottom-angle-round {
+            &._left {
+                left: -5.6rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, $white 51%);
+                background-size: 20rem 20rem;
+                background-position: 65% 71%;
+                background-repeat: no-repeat;
+                transform: translateX(-50%);
+                clip-path: polygon(21% 0, 100% 1%, 100% 100%, 20% 100%);
+                @include mobile{
+                    left: -3.9rem;
+                    background: rgb(86, 255, 0);
+                    background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, $white 51%);
+                    background-size: 20rem 15rem;
+                    background-position: 86% 83%;
+                    background-repeat: no-repeat;
+                    transform: translateX(-40%);
+                    clip-path: polygon(76% 35%, 80% 2%, 80% 100%, 0 100%);
+                }
+            }
+
+            &._right {
+                right: -5.6rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, $white 51%);
+                background-size: 20rem 20rem;
+                background-position: 35% 71%;
+                background-repeat: no-repeat;
+                transform: translateX(50%);
+                clip-path: polygon(0 0, 80% 2%, 80% 100%, 0 100%);
+                @include mobile{
+                    right: -3.9rem;
+                    background: rgb(86, 255, 0);
+                    background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, $white 51%);
+                    background-size: 20rem 15rem;
+                    background-position: 25% 84%;
+                    background-repeat: no-repeat;
+                    transform: translateX(50%);
+                    clip-path: polygon(0% 32%, 80% 2%, 80% 100%, 0 100%);
+                }
+            }
+        }
+    }
+
+    &._left {
+        & .ui-bottom-angle-line {
+            background-color: $white;
+
+            &._left {
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+            }
+        }
+
+        & .ui-bottom-angle-round {
+            &._left {
+                left: -5.6rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, white 51%);
+                background-size: 16rem 15rem;
+                background-position: 79% 57%;
+                background-repeat: no-repeat;
+                transform: translateX(-50%);
+                clip-path: polygon(50% 53%, 100% 58%, 100% 100%, 49% 100%);
+            }
+        }
+    }
+
+    &-line {
+        position: absolute;
+        top: 1.7rem;
+        height: 100%;
+        display: block;
+        z-index: 2;
+
+
+        &._left {
+            left: -4.7rem;
+            width: 5rem;
+            clip-path: polygon(100% 0, 33% 100%, 100% 100%);
+            
+
+        }
+
+        &._right {
+            right: -4.7rem;
+            width: 5rem;
+            clip-path: polygon(0 0, 0% 100%, 67% 100%);
+
+           
+
+        }
+
+    }
+
+
+    &-round {
+        position: absolute;
+
+        bottom: -1px;
+        width: 10rem;
+        height: 10rem;
+        background-size: cover;
+        z-index: 3;
+        @include mobile{
+            height: 9rem;
+        }
+
+
+
+    }
+}
+
+.ui-pagination-angle {
+    padding: 2rem 2rem;
+
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    border-radius: 3rem 3rem 0 0;
+
+    &._bg {
+        background-color: $bg;
+
+        & .ui-pagination-angle-line {
+            background-color: $bg;
+
+        }
+
+        & .ui-pagination-angle-round {
+            &._left {
+                left: -3.95rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                background-size: 20rem 20rem;
+                background-position: 65% 69%;
+                background-repeat: no-repeat;
+                transform: translateX(-50%);
+                clip-path: polygon(21% 0, 100% 1%, 100% 100%, 20% 100%);
+            }
+
+            &._right {
+                right: -3.95rem;
+                background: rgb(86, 255, 0);
+                background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, #EEEBEC 51%);
+                background-size: 20rem 20rem;
+                background-position: 35% 69%;
+                background-repeat: no-repeat;
+                transform: translateX(50%);
+                clip-path: polygon(0 0, 80% 2%, 80% 100%, 0 100%);
+            }
+        }
+    }
+
+    &-line {
+        position: absolute;
+        top: 1.7rem;
+        height: 100%;
+        display: block;
+        z-index: 2;
+
+
+        &._left {
+            left: -4.6rem;
+            width: 5rem;
+            clip-path: polygon(100% 0, 33% 100%, 100% 100%);
+
+        }
+
+        &._right {
+            right: -4.6rem;
+            width: 5rem;
+            clip-path: polygon(0 0, 0% 100%, 67% 100%);
+
+
+        }
+
+    }
+
+    &-round {
+        position: absolute;
+
+        bottom: -1px;
+        width: 10rem;
+        height: 10rem;
+        background-size: cover;
+        z-index: 3;
+
+
+
+    }
 }

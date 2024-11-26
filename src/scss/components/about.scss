@@ -20,12 +20,8 @@
     padding-bottom: 20rem;
 
     &__top {
-        background-color: $bg;
-        margin: auto;
         margin-bottom: 5rem;
-        padding: 1rem 5rem 2rem;
-        box-sizing: border-box;
-
+        width: fit-content;
     }
 
     &__body {
@@ -70,6 +66,10 @@
                 border-radius: 2rem;
                 width: 100%;
                 height: 100%;
+                @include mobile{
+                border-radius: 3rem;
+
+                }
 
                 & .swiper-slide {
                     display: flex;
@@ -127,8 +127,7 @@
 
         &-bg {
             background-color: $white;
-            padding: 1rem 5rem 2rem;
-            box-sizing: border-box;
+
         }
 
     }
@@ -156,32 +155,44 @@
 
             &-slide {
                 background-color: $red-dark;
-                @include br;
+               border-radius: 3rem;
                 padding: 1rem 2rem;
                 box-sizing: border-box;
+                @include mobile{
+                    border-radius: 4rem;
+                }
             }
         }
 
         &-e {
-            background-color: $white;
-            border-radius: 1rem 10rem 1rem 1rem;
+            background-color: $red-dark;
+            border-radius: 1rem;
             padding: 1.6rem;
             box-sizing: border-box;
             position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3.2rem;
+            background-image: url(../assets/images/bg-adv-card.svg);
+            background-position: top right;
+            background-size: cover;
+            background-repeat: no-repeat;
 
             @include mobile {
                 grid-template-columns: 100%;
                 grid-template-rows: 40rem 40rem;
-                border-radius: 2rem 15rem 2rem 2rem;
+                border-radius: 4rem;
+                background-image: url(../assets/images/bg-adv-card-mob.svg);
             }
 
             &-count {
                 position: absolute;
-                right: 0rem;
-                top: 0rem;
+                right: -.1px;
+                top: -.1px;
+                clip-path: polygon(100% 0, 0 0, 100% 100%);
+                padding: 0 0 7rem 5rem;
+
+
 
             }
 
@@ -192,7 +203,8 @@
                 height: 100%;
 
                 @include mobile {
-                    border-radius: 2rem 15rem 2rem 2rem;
+                    border-radius: 2rem 2rem 2rem 2rem;
+                    clip-path: polygon(80% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
                 }
 
                 & img {
@@ -293,18 +305,21 @@
 }
 
 .complects {
-    @include mobile{
+    @include mobile {
         background-color: $white;
         padding: 8rem 0;
     }
+
     &__top {
         display: flex;
         justify-content: space-between;
 
         &-bg {
-            background-color: $white;
-            padding: 5rem;
             box-sizing: border-box;
+        }
+
+        & .tl1 {
+            padding-bottom: 3rem;
         }
     }
 
@@ -316,20 +331,22 @@
         display: grid;
         grid-template-columns: .8fr 1fr;
         gap: 2rem;
-      @include mobile{
-        grid-template-columns: 100%;
-        padding: 0;
 
-      }
+        @include mobile {
+            grid-template-columns: 100%;
+            padding: 0;
+
+        }
 
         &-img {
             display: flex;
             border-radius: 2rem;
             overflow: hidden;
             z-index: 1;
-            @include mobile{
+
+            @include mobile {
                 height: 52rem;
-                transform: translateY(6rem);
+                transform: translateY(7rem);
             }
 
             & img {
@@ -351,9 +368,11 @@
             grid-template-columns: 1fr 1fr;
             grid-auto-rows: min-content;
             gap: 2rem 9rem;
-            @include mobile{
+
+            @include mobile {
                 grid-template-columns: 100%;
                 background-color: $white;
+                border-radius: 4rem;
             }
 
             &-ttl {

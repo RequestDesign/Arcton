@@ -1,6 +1,7 @@
 .our-services {
     background-color: $white;
 
+
     & .container {
         position: relative;
 
@@ -21,9 +22,7 @@
             padding: 0 2rem;
         }
 
-        & .tl1 {
-            background-color: $bg;
-        }
+      
 
         &-tags {
             transform: translateY(-50%);
@@ -51,13 +50,13 @@
             position: relative;
             padding: 2rem;
             box-sizing: border-box;
-            height: 41rem;
+            min-height: 41rem;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
 
             @include mobile {
-                height: 68rem;
+                min-height: 87rem;
                 gap: 4rem;
                 padding: 4rem;
 
@@ -97,7 +96,7 @@
             width: calc(100% - 5rem);
 
             @include mobile {
-                height: 28rem;
+                height: 40rem;
                 width: 100%;
             }
 
@@ -144,9 +143,9 @@
                 right: 0;
                 top: 0;
                 background-color: $red-dark;
-                background-image: url(../../assets/images/icons/arrow-small-right.svg);
+                background-image: url(../assets/images/icons/arrow-small-right.svg);
                 background-position: 55% 50%;
-                background-size: 1.2rem;
+                background-size: 15%;
                 background-repeat: no-repeat;
                 width: 4.6rem;
                 height: 4.6rem;
@@ -196,9 +195,7 @@
         }
 
         &-link {
-            padding: 2rem;
             box-sizing: border-box;
-            background-color: $bg;
         }
     }
 }

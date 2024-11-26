@@ -24,8 +24,10 @@
 
                                     <span class="txtBig col-wh">
                                         Ваш надежный партнер в строительстве
-                                        <a href="#" class="btn-primary">
-                                            Оставить заявку
+                                        <a href="#" class="btn-primary modal-opener" data-modal="request">
+                                            <span class="btn-primary-text">
+                                                Оставить заявку
+                                            </span>
                                             <span class="btn-primary-arrow"></span>
                                         </a>
                                     </span>
@@ -78,8 +80,15 @@
 
                         </li>
                     </ul>
-                    <div class="swiper-pagination _overlay">
-                    </div>
+                    <div class="heading__c-footer-c ui-pagination-angle _bg desktop">
+                        <div class="swiper-pagination ">
+                        </div>
+                          <span class="ui-pagination-angle-line _right"></span>
+                          <span class="ui-pagination-angle-round _right"></span>
+                          <span class="ui-pagination-angle-line _left"></span>
+                          <span class="ui-pagination-angle-round _left"></span>
+                       
+                      </div>
                 </div>
                 <div class="heading__tags ">
                     <div class="tag">
@@ -125,8 +134,11 @@
             <!--  -->
             <section class="about history">
                 <div class="container ">
-                    <div class="history__top">
+                    <div class="history__top ui-heading-angle _bg">
                         <p class="tl1">История компании</p>
+                        <span class="ui-heading-angle-line _right"></span>
+                        <span class="ui-heading-angle-line _left"></span>
+                        <span class="ui-heading-angle-round"></span>
                     </div>
 
                     <div class="history__body">
@@ -171,11 +183,16 @@
             <section class="about advantages">
                 <div class="container">
                     <div class="advantages__top">
-                        <div class="advantages__top-bg">
+                        <div class="advantages__top-bg ui-heading-angle _wh">
+                            <span class="ui-heading-angle-line _right"></span>
+                            <span class="ui-heading-angle-line _left"></span>
+                            <span class="ui-heading-angle-round"></span>
                             <p class="tl1">Преимущества работы с нами</p>
                         </div>
                         <button class="btn-primary modal-opener desktop" data-modal="request">
-                            Оставить заявку
+                            <span class="btn-primary-text">
+                                Оставить заявку
+                            </span>
                             <span class="btn-primary-arrow"></span>
                         </button>
                     </div>
@@ -186,7 +203,9 @@
                             <ul class="swiper-wrapper">
                                 <li class="swiper-slide">
                                     <div class="advantages__slider-e">
-                                        <span class="advantages__slider-e-count txt22 _bold col-wh">01</span>
+                                        <span class="advantages__slider-e-count txt22 _bold col-wh">
+                                            01
+                                        </span>
 
                                         <div class="advantages__slider-e-img">
                                             <img src="./assets/images/image.png" alt="">
@@ -242,7 +261,9 @@
                         </div>
                     </div>
                     <button class="btn-primary modal-opener mobile" data-modal="request">
-                        Оставить заявку
+                        <span class="btn-primary-text">
+                            Оставить заявку
+                        </span>
                         <span class="btn-primary-arrow"></span>
                     </button>
 
@@ -276,11 +297,18 @@
                 <div class="container">
                     <div class="complects__top">
                         <p class="tl1">Наше оборудование</p>
-                        <div class="complects__top-bg desktop">
+                        <div class="complects__top-bg desktop ui-bottom-angle _wh _left">
+
                             <button class="btn-primary modal-opener" data-modal="request">
-                                Оставить заявку
+                                <span class="btn-primary-text">
+                                    Оставить заявку
+                                </span>
                                 <span class="btn-primary-arrow"></span>
                             </button>
+                            <!--  -->
+                            <span class="ui-bottom-angle-line _left"></span>
+                            <span class="ui-bottom-angle-round _left"></span>
+                         
                         </div>
                     </div>
                     <div class="complects__body">
@@ -288,10 +316,10 @@
                             <img src="./assets/images/image.png" alt="">
                         </div>
                         <div class="complects__body-right">
-                            
+
                             <p class="complects__body-right-ttl">
-                                В собственности компании <br/>
-                                имеется все необходимое оборудование  <br class="desktop"/> 
+                                В собственности компании <br />
+                                имеется все необходимое оборудование <br class="desktop" />
                                 малой механизации
                             </p>
                             <p class="txt22">Lorem, ipsum. - 5count</p>
@@ -302,12 +330,14 @@
                             <p class="txt22">Lorem, ipsum. - 5count</p>
                             <p class="txt22">Lorem, ipsum. - 5count</p>
                             <button class="btn-primary mobile modal-opener" data-modal="request">
-                                Оставить заявку
+                                <span class="btn-primary-text">
+                                    Оставить заявку
+                                </span>
                                 <span class="btn-primary-arrow"></span>
                             </button>
                         </div>
                     </div>
-                    
+
                 </div>
             </section>
             <!--  -->
@@ -316,27 +346,6 @@
         <include src="./components/_footer.html"></include>
     </div>
 
-    <!--  <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU" type="text/javascript"></script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    function init() {
-      var myMap = new ymaps.Map("map", {
-        center: [47.204572074287015, 39.67028549999995],
-        zoom: 16,
-        controls: ['fullscreenControl']
-      });
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'there is no palce for narkomany 😎'
-      }, {
-        iconLayout: 'default#image',
-        iconImageHref: './assets/images/icons/map-marker.svg',
-        iconImageSize: [50, 50],
-
-      }),
-        myMap.geoObjects
-          .add(myPlacemark)
-    }
-  </script> -->
 </body>
 
 </html>

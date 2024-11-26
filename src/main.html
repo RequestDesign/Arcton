@@ -12,83 +12,17 @@
   <div class="wrapper">
     <include src="./components/_header.html"></include>
     <main>
-      <section class="heading">
-        <div class="heading__c swiper">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide heading__c-slide">
-              <div class="heading__c-slide-img">
-                <img src="./assets/images/image.png" alt="">
-              </div>
-              <div class="container heading__c-slide-body">
-                <div class="heading__c-slide-body-top">
-
-                  <span class="txtBig col-wh">
-                    Ваш надежный партнер в строительстве
-                    <a href="#" class="btn-primary">
-                      Оставить заявку
-                      <span class="btn-primary-arrow"></span>
-                    </a>
-                  </span>
-                </div>
-                <div class="heading__c-slide-body-bottom col-wh">
-                  <p class="tl2">Доверьтесь нам!</p>
-                  <p class="txt22 _bold">
-                    Специализируемся на предоставлении полного спектра услуг в области строительства, реконструкции и
-                    капитального ремонта
-                  </p>
-                </div>
-              </div>
-
-            </li>
-            <li class="swiper-slide heading__c-slide">
-              <div class="heading__c-slide-img">
-                <img src="./assets/images/image.png" alt="">
-              </div>
-              <div class="container heading__c-slide-body">
-                <div class="heading__c-slide-body-top">
-
-                  <p class="txtBig">
-                    слайд 2
-                  </p>
-                </div>
-                <div class="heading__c-slide-body-bootom">
-                  <p class="tl2">слайд 2 еще раз</p>
-
-                </div>
-              </div>
-
-            </li>
-            <li class="swiper-slide heading__c-slide">
-              <div class="heading__c-slide-img">
-                <img src="./assets/images/image.png" alt="">
-              </div>
-              <div class="container heading__c-slide-body">
-                <div class="heading__c-slide-body-top">
-
-                  <p class="txtBig">
-                    слайд 3
-                  </p>
-                </div>
-                <div class="heading__c-slide-body-bootom">
-                  <p class="tl2">слайд 3 еще раз</p>
-
-                </div>
-              </div>
-
-            </li>
-          </ul>
-          <div class="swiper-pagination _overlay">
-
-          </div>
-        </div>
-      </section>
+      <include src="./components/_heading.html"></include>
       <!--  -->
       <include src="./components/_our-services.html"></include>
       <!--  -->
       <section class="main active-projects">
         <div class="container">
-          <div class="active-projects__top">
+          <div class="active-projects__top ui-heading-angle _bg">
             <p class="tl1">Проекты в реализации</p>
+            <span class="ui-heading-angle-line _right"></span>
+            <span class="ui-heading-angle-line _left"></span>
+            <span class="ui-heading-angle-round"></span>
           </div>
 
           <button class="swiper-btn swiper-btn-prev desktop"></button>
@@ -166,13 +100,17 @@
             </div>
           </div>
 
-
-          <div class="active-projects__bottom">
-            <button class="btn-primary">
-              Все проекты
+          <div class="active-projects__bottom ui-bottom-angle _bg">
+            <a href="#" class="btn-primary">
+              <span class="btn-primary-text">
+                Все проекты
+              </span>
               <span class="btn-primary-arrow"></span>
-            </button>
-
+            </a>
+            <span class="ui-bottom-angle-line _right"></span>
+            <span class="ui-bottom-angle-round _right"></span>
+            <span class="ui-bottom-angle-line _left"></span>
+            <span class="ui-bottom-angle-round _left"></span>
           </div>
 
         </div>
@@ -188,7 +126,11 @@
           <div class="swiper">
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
-                <include src="./components/_project-card.html"></include>
+                <include src="./components/_project-card.html" data-props='{
+                  ".project-card__date": {
+                    "html": "<span class=_solo>2024</span>"
+                  }
+                }'></include>
               </li>
               <li class="swiper-slide">
                 <include src="./components/_project-card.html"></include>
@@ -199,10 +141,12 @@
             </ul>
           </div>
 
-          <button class="btn-primary">
-            Все проекты
+          <a href="" class="btn-primary">
+            <span class="btn-primary-text">
+              Все проекты
+            </span>
             <span class="btn-primary-arrow"></span>
-          </button>
+          </a>
 
         </div>
       </section>
@@ -212,7 +156,10 @@
       <section class="main partners">
         <div class="container">
           <div class="partners__top">
-            <div class="partners__top-heading">
+            <div class="partners__top-heading ui-heading-angle _bg">
+              <span class="ui-heading-angle-line _right"></span>
+              <span class="ui-heading-angle-line _left"></span>
+              <span class="ui-heading-angle-round"></span>
               <p class="tl1">Партнёры</p>
             </div>
             <p class="txt22 _bold">
@@ -244,14 +191,23 @@
             </li>
           </ul>
 
-          <div class="partners__footer">
-            <button class="btn-primary">
-              Узнать больше
+          <div class="partners__footer ui-bottom-angle _bg">
+            <button class="btn-primary modal-opener" data-modal="request">
+              <span class="btn-primary-text">
+               Узнать больше
+            </span>
               <span class="btn-primary-arrow"></span>
             </button>
-          </div>
 
+            <span class="ui-bottom-angle-line _right"></span>
+            <span class="ui-bottom-angle-round _right"></span>
+
+            <span class="ui-bottom-angle-line _left"></span>
+            <span class="ui-bottom-angle-round _left"></span>
+          </div>
         </div>
+
+
       </section>
       <!--  -->
       <section class="main mails">
@@ -301,10 +257,12 @@
             </ul>
           </div>
 
-          <button class="btn-primary">
-            Узнать больше
+          <a href="" class="btn-primary">
+            <span class="btn-primary-text">
+             Узнать больше
+          </span>
             <span class="btn-primary-arrow"></span>
-          </button>
+          </a >
 
         </div>
       </section>
@@ -314,7 +272,7 @@
     <include src="./components/_footer.html"></include>
   </div>
 
- 
+
 </body>
 
 </html>

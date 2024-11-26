@@ -12,77 +12,7 @@
     <div class="wrapper">
         <include src="./components/_header.html"></include>
         <main>
-            <section class="heading">
-                <div class="heading__c swiper">
-                    <ul class="swiper-wrapper">
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.png" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
-
-                                    <span class="txtBig col-wh">
-                                        Ваш надежный партнер в строительстве
-                                        <a href="#" class="btn-primary">
-                                            Оставить заявку
-                                            <span class="btn-primary-arrow"></span>
-                                        </a>
-                                    </span>
-                                </div>
-                                <div class="heading__c-slide-body-bottom col-wh">
-                                    <p class="tl2">Доверьтесь нам!</p>
-                                    <p class="txt22 _bold">
-                                        Специализируемся на предоставлении полного спектра услуг в области
-                                        строительства, реконструкции и
-                                        капитального ремонта
-                                    </p>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.png" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
-
-                                    <p class="txtBig">
-                                        слайд 2
-                                    </p>
-                                </div>
-                                <div class="heading__c-slide-body-bootom">
-                                    <p class="tl2">слайд 2 еще раз</p>
-
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="swiper-slide heading__c-slide">
-                            <div class="heading__c-slide-img">
-                                <img src="./assets/images/image.png" alt="">
-                            </div>
-                            <div class="container heading__c-slide-body">
-                                <div class="heading__c-slide-body-top">
-
-                                    <p class="txtBig">
-                                        слайд 3
-                                    </p>
-                                </div>
-                                <div class="heading__c-slide-body-bootom">
-                                    <p class="tl2">слайд 3 еще раз</p>
-
-                                </div>
-                            </div>
-
-                        </li>
-                    </ul>
-                    <div class="swiper-pagination _overlay">
-
-                    </div>
-                </div>
-            </section>
+            <include src="./components/_heading.html"></include>
             <!--  -->
             <section class="projects">
                 <div class="container">
@@ -102,7 +32,11 @@
                             <div class="switcher-slide">
                                 <ul>
                                     <li>
-                                        <include src="./components/_project-card.html"></include>
+                                        <include src="./components/_project-card.html" data-props='{
+                                            ".project-card__date": {
+                                              "html": "<span class=_solo>2024</span>"
+                                            }
+                                          }'></include>
                                     </li>
                                     <li>
                                         <include src="./components/_project-card.html"></include>
@@ -125,7 +59,9 @@
                     </div>
 
                     <button class="btn-primary">
-                        Загрузить ещё
+                        <span class="btn-primary-text">
+                            Загрузить еще
+                        </span>
                         <span class="btn-primary-arrow"></span>
                     </button>
 
