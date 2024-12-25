@@ -114,7 +114,7 @@ function processHtmlLoader(content, loaderContext) {
 module.exports = {
   mode,
   target,
-  devtool: "inline-source-map",
+  devtool: devMode ? "inline-source-map" : false,
   devServer: {
     historyApiFallback: true,
     open: true,
@@ -207,25 +207,12 @@ module.exports = {
           },
         ],
       }),
-    new FileManagerPlugin({
-      events: {
-        onEnd: {
-          mkdir: [devMode ? '' : 'dist/css'],
-          copy: [
-            { source: 'dist/js', destination: 'deploy/local/templates/gidrolock/js' },
-            { source: 'dist/css', destination: 'deploy/local/templates/gidrolock/css' },
-          ]
-        }
-      }
-    }),
+   
   ],
 
   optimization: {
     minimize: false,
-    splitChunks: {
-      chunks: 'all',
-     
-    }
+    
   },
 
   module: {

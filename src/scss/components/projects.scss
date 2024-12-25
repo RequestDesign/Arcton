@@ -8,6 +8,14 @@
     & .btn-primary {
         margin: auto;
     }
+    &__loadmore{
+        margin-left: 50%;
+        transform: translateX(-100%);
+        margin-top: 5rem;
+        @include mobile{
+            margin-top: 10rem;
+        }
+    }
 
     &__top {
 
