@@ -5,6 +5,7 @@ import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
 import { rem } from '../utils/constants'
 import { Fancybox } from "@fancyapps/ui";
 import { Switcher } from '../utils/Switcher';
+import Form from '../utils/Form';
 
 $(function () {
     dropDowns()
@@ -21,6 +22,14 @@ $(function () {
 
 
     }
+    document.querySelectorAll('.form')
+        .forEach((f) => {
+            if(f){
+                new Form(f)
+
+            }
+        })
+
 })
 
 

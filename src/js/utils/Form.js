@@ -6,11 +6,11 @@ export default class Form {
      * @param {Function} submitFoo 
      * 
      */
-    constructor(formDomEl, submitFoo) {
+    constructor(formDomEl, submitFoo = () => { }) {
         this._form = formDomEl
         this._form.setAttribute('novalidate', true)
-        this._inputContainerSelector = 'form-input'
-        this._inputErrorMsgSelector = 'input-text-error-msg'
+        this._inputContainerSelector = 'input'
+        this._inputErrorMsgSelector = 'input-error'
         this._inputErrorSelector = '_error'
         this._inputPlaceholderSelector = 'input-text-placeholder'
         this.submitForm = submitFoo
@@ -18,6 +18,7 @@ export default class Form {
         this._inputsData = this._createInputData(this._inputs)
         this._passwordInput = Array.from(this._inputs).find(e => e.name == 'password')
         this._passwordRepeatInput = Array.from(this._inputs).find(e => e.name == 'passwordRepeat')
+        this._submitBtn = this._form.querySelector('.form-submit')
         /**
          * _inputsData: {[key: input.name] :{
          *                  value: any,
@@ -40,15 +41,7 @@ export default class Form {
         this._inputsData[inputTarget.name].value = inputTarget.value
         this._validation(inputTarget);
 
-        if (!inputTarget.placeholder) return
-
-        if (inputTarget.value) {
-            inputTarget.closest('.' + this._inputContainerSelector)
-                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'none'
-        } else {
-            inputTarget.closest('.' + this._inputContainerSelector)
-                .querySelector('.' + this._inputPlaceholderSelector).style.display = 'block'
-        }
+       
 
 
 
@@ -91,7 +84,6 @@ export default class Form {
 
         if (this._inputsData[target.name].isRequired && !this._inputsData[target.name].value) {
             //check requred
-            console.log('required');
             inputContainer.classList.add(this._inputErrorSelector);
             errorMsg.textContent = 'Это поле обязательно.'
             this._inputsData[target.name].isValid = false
@@ -113,7 +105,6 @@ export default class Form {
 
         } else if (target.getAttribute('type') == 'checkbox' || target.getAttribute('type') == 'radio') {
             //check for checkbox and radio
-            console.log('checkbox and radio');
             this._inputsData[target.name].isValid = !this._inputsData[target.name].isRequired ? true : target.checked
             if (!target.checked) {
                 inputContainer.classList.add(this._inputErrorSelector);
@@ -131,7 +122,7 @@ export default class Form {
 
         } else {
             //validation successfull
-            console.log('successfull');
+
             this._inputsData[target.name].isValid = true
             inputContainer.classList.remove(this._inputErrorSelector)
             errorMsg.textContent = ' '
@@ -141,8 +132,7 @@ export default class Form {
     }
 
 
-    _onSubmit(evt) {
-        evt.preventDefault();
+    _onSubmit() {
         let whatsUp = true
         for (const inp of this._inputs) {
             this._inputHandler(inp)
@@ -153,16 +143,9 @@ export default class Form {
 
         if (!whatsUp) return
         //сабмит
-        this.submitForm(this._inputsData)
-        //дальше мои полномочия- все
+        this._form.dispatchEvent(new Event('submit'));
 
 
-        /*  const inputs = this._form.querySelectorAll('.' + this._inputContainerSelector + ' input');
-         inputs.forEach(input => {
-             input.value = '';
-         });
- 
-         this._inputsData = this._createInputData(this._inputs) */
     }
 
 
@@ -174,17 +157,7 @@ export default class Form {
         for (const input of inputs) {
 
             input.setAttribute('autocomplete', 'off')
-            if (input.placeholder) {
-
-                const plcaholder = input.closest('.' + this._inputContainerSelector)
-                    .querySelector('.' + this._inputPlaceholderSelector)
-
-                plcaholder.textContent = input.placeholder
-                if (input.dataset.required) {
-                    plcaholder.setAttribute('data-end', ' *')
-                }
-
-            }
+           
 
 
             if (input.name == 'password') {
@@ -219,7 +192,7 @@ export default class Form {
                 echo[input.name] = { value, isValid, isRequired }
             }
         }
- 
+
 
         return echo
 
@@ -252,7 +225,9 @@ export default class Form {
 
     initForm() {
         this._form.noValidate = true
-        this._form.addEventListener('submit', (e) => this._onSubmit(e))
+        this._submitBtn.setAttribute('type', 'button')
+        this._submitBtn.addEventListener('click', (e) => { this._onSubmit(e) })
+
         this._inputs.forEach(el => {
             el.addEventListener('input', (e) => this._inputHandler(e.target))
             el.addEventListener('blur', (e) => this._inputHandler(e.target))

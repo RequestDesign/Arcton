@@ -5,12 +5,9 @@
         gap: 5rem;
     }
 
-    & .btn-primary {
-        margin: auto;
-    }
     &__loadmore{
         margin-left: 50%;
-        transform: translateX(-100%);
+        transform: translateX(-50%);
         margin-top: 5rem;
         @include mobile{
             margin-top: 10rem;
