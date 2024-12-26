@@ -8,6 +8,8 @@ import { Switcher } from '../utils/Switcher';
 import Form from '../utils/Form';
 
 $(function () {
+$('html').addClass('_page-loaded')
+
     dropDowns()
     modalsHandler()
     initSwipers()
