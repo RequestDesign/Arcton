@@ -345,6 +345,7 @@ function modalsHandler() {
 
     modalClosers.on('click', (ev) => {
         const { classList } = ev.target
+        console.log(classList);
         if (!classList.contains('modal-closer')) return
 
         if (classList.contains('modal')) {

@@ -3,40 +3,25 @@
     display: none;
     position: fixed;
     z-index: 1111;
-
     width: 100vw;
     min-height: 100vh;
     top: 0;
     left: 0;
+    background-color: rgba(191, 183, 183, 0.1);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: 1rem;
+    align-items: center;
+    justify-content: center;
 
-    &-c-wrp {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @include mobile {
-            overflow: auto;
-            height: 100vh;
-        }
-
-    }
-
-    &-main {
-
-        background-color: rgba(191, 183, 183, 0.1);
-        backdrop-filter: blur(1rem);
-        -webkit-backdrop-filter: 1rem;
-        width: 100vw;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     &._opened {
-
+        display: flex ;
         & .modal__c {
-            transform: translate(0, 0);
+            transform: translate(50%, calc(50% - 10rem));
+            @include mobile{
+                transform: translate(0%, 10rem);
+
+            }
         }
 
 
@@ -44,7 +29,7 @@
 
 
     &__c {
-        transform: translate(0, -50%);
+        transform: translate(50%, -50%);
         transition: transform .5s;
         position: relative;
         gap: 2rem;
@@ -57,9 +42,10 @@
         min-height: 50rem;
 
         @include mobile {
-            width: 100%;
+            width: calc(100% - 4rem);
             padding: 4rem 3rem;
             margin: 0 2rem;
+            transform: translate(0%, -50%);
         }
 
         &-closer {
