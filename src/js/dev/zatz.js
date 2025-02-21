@@ -1,14 +1,14 @@
 import $ from 'jquery'
 import Inputmask from 'inputmask'
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Grid, Autoplay, EffectFade } from 'swiper/modules';
 import { rem } from '../utils/constants'
 import { Fancybox } from "@fancyapps/ui";
 import { Switcher } from '../utils/Switcher';
 import Form from '../utils/Form';
 
 $(function () {
-$('html').addClass('_page-loaded')
+    $('html').addClass('_page-loaded')
 
     dropDowns()
     modalsHandler()
@@ -26,10 +26,11 @@ $('html').addClass('_page-loaded')
     }
     document.querySelectorAll('.form')
         .forEach((f) => {
-            if(f){
+            if (f) {
                 new Form(f)
-
+                
             }
+           
         })
 
 })
@@ -69,7 +70,11 @@ function initSwipers() {
     if (heading) {
 
         new Swiper(heading.querySelector('.swiper'), {
-            modules: [Pagination, Autoplay],
+            modules: [Pagination, Autoplay, EffectFade],
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             loop: true,
             slidesPerView: 1,
             autoplay: {
@@ -127,6 +132,8 @@ function initSwipers() {
 
 
         const imagesSwiper = new Swiper(images, {
+            modules: [EffectFade],
+            effect: 'fade',
             simulateTouch: false,
             loop: false,
             slidesPerView: 1,
@@ -146,7 +153,7 @@ function initSwipers() {
             loop: false,
             simulateTouch: false,
             slidesPerView: 1,
-            spaceBetween: rem(2),
+            spaceBetween: rem(3),
             initialSlide: 0,
 
             breakpoints: {
@@ -234,7 +241,8 @@ function initSwipers() {
     const projectsDetail = document.querySelector('.projects-detail')
     if (projectsDetail) {
         new Swiper(projectsDetail.querySelector('.swiper'), {
-            modules: [Pagination, Autoplay],
+            modules: [Pagination, Autoplay, EffectFade],
+            effect: 'fade',
             loop: true,
             slidesPerView: 1,
             autoplay: {
@@ -277,7 +285,7 @@ function initSwipers() {
     if (aboutAdv) {
         new Swiper(aboutAdv.querySelector('.swiper'), {
             modules: [Navigation],
-            slidesPerView: 1.3,
+            slidesPerView: 1.2,
             centeredSlides: true,
             spaceBetween: rem(3),
             breakpoints: {

@@ -29,6 +29,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+            position: relative;
+            z-index: 5;
             @include mobile{
                 transform: translate(0);
             }
@@ -39,6 +41,8 @@
     &__slide {
         box-sizing: border-box;
         padding-right: 5rem;
+        min-height: 100%;
+        height: unset;
 
         @include mobile {
             padding: 0;
@@ -54,6 +58,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            height: 100%;
 
             @include mobile {
                 min-height: 87rem;

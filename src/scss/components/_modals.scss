@@ -7,19 +7,23 @@
     min-height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(191, 183, 183, 0.1);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: 1rem;
+    background-color: rgba(191, 183, 183, 0.7);
     align-items: center;
     justify-content: center;
 
+    @supports (backdrop-filter: blur(10px)) {
+            background-color: rgba(191, 183, 183, 0.1);
+            backdrop-filter: blur(10px);
+    }
 
     &._opened {
-        display: flex ;
+        display: flex;
+
         & .modal__c {
             transform: translate(50%, calc(50% - 10rem));
-            @include mobile{
-                transform: translate(0%, 10rem);
+
+            @include mobile {
+                transform: translate(0%, 2rem);
 
             }
         }
@@ -33,25 +37,30 @@
         transition: transform .5s;
         position: relative;
         gap: 2rem;
-        background-color: $white;
         border-radius: 3rem;
-        padding: 6rem;
+        padding: 12rem 6rem 6rem;
         border-radius: 3rem 0 3rem 3rem;
         box-sizing: border-box;
         width: 100rem;
-        min-height: 50rem;
+        min-height: 66.2rem;
+        background-image: url(../assets/images/modal.svg);
+        background-position: top right;
+        background-size: 100%;
+        background-repeat: no-repeat;
 
         @include mobile {
             width: calc(100% - 4rem);
-            padding: 4rem 3rem;
+            padding: 12rem 3rem 3rem;
             margin: 0 2rem;
             transform: translate(0%, -50%);
+            background-image: url(../assets/images/modal-mob.svg);
+            border-radius: 7rem;
         }
 
         &-closer {
             position: absolute;
-            right: -0rem;
-            top: -5.6rem;
+            right: 3rem;
+            top: 2rem;
             z-index: 10;
 
             &.ui-bottom-angle._left .ui-bottom-angle-round._left {
@@ -73,9 +82,10 @@
             &.ui-bottom-angle._left .ui-bottom-angle-line._left {
                 display: none;
             }
-           @include mobile{
-            border-radius: 50% 50% 0 0;
-           }
+
+            @include mobile {
+                border-radius: 50% 50% 0 0;
+            }
         }
 
 

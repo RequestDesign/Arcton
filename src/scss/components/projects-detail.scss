@@ -48,12 +48,15 @@
                     background-color: $white;
                     overflow: hidden;
                     border-radius: 1.6rem;
+                    background-color: $white;
 
                     & .swiper {
                         width: 100%;
 
                         &-wrapper {
                             height: 47.4rem;
+                            border-radius: 1.6rem;
+                            overflow: hidden;
                         }
 
                         &-slide {

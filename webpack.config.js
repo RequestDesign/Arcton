@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const autoprefixer = require('autoprefixer')
 const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
@@ -253,6 +254,22 @@ module.exports = {
             },
           },
           "group-css-media-queries-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  autoprefixer({
+                    overrideBrowserslist: [
+                      "last 2 versions",
+                      "> 1%",
+                      "IE 11",
+                    ],
+                  }),
+                ],
+              },
+            },
+          },
           "sass-loader",
         ]
       },

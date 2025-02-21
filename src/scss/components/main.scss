@@ -5,24 +5,25 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        @include mobile{
-           align-items: center;
+
+        @include mobile {
+            align-items: center;
         }
     }
 
     & .swiper-btn {
         position: absolute;
-        top: 45rem;
+        top: 50%;
         z-index: 1;
 
         &-prev {
             left: 0;
-            transform: translateX(-150%);
+            transform: translate(-150%, -50%);
         }
 
         &-next {
             right: 0;
-            transform: translateX(150%);
+            transform: translate(150%, -50%);
 
         }
     }
@@ -51,8 +52,9 @@
             height: auto;
             grid-template-columns: 100%;
             grid-template-rows: 70rem 48rem;
-            background-color: $bg;
             border: 5px solid $white;
+            border-top-width: 10px;
+            border-bottom-width: 10px;
             border-radius: 3rem;
             background-color: $bg;
         }
@@ -66,7 +68,7 @@
         border-right: 20px solid $white;
         border-left: 20px solid $white;
         box-sizing: border-box;
-        border-radius: 3rem;
+        border-radius: 5rem;
         background-color: $bg;
         padding: 2rem;
         box-sizing: border-box;
@@ -144,20 +146,20 @@
         display: flex;
         flex-direction: column;
         background-color: $bg;
-        border-radius: 3rem;
+        border-radius: 5rem;
 
 
         & .swiper-slide {
             height: 100%;
 
             display: flex;
-            border-radius: 3rem;
+            border-radius: 5rem;
             overflow: hidden;
 
             & img {
                 object-fit: cover;
                 object-position: center;
-                border-radius: 3rem;
+                border-radius: 5rem;
             }
         }
 
@@ -171,15 +173,17 @@
     }
 
     &__bottom {
-       
-        box-sizing: border-box;
-        width: fit-content;
+        @include desktop{
+            width: 36rem;
+            height: 7rem;
+        }
+        padding-top: 1rem;
         margin-left: auto;
 
         @include mobile {
-          margin: 0;
-       
-           
+            margin: 0;
+
+
         }
     }
 
@@ -206,7 +210,8 @@
                 padding: 0 3rem;
             }
         }
-        & .swiper{
+
+        & .swiper {
             width: 100%;
         }
 
@@ -254,6 +259,7 @@
         @include mobile {
             grid-template-columns: 100%;
             gap: 3rem;
+            grid-auto-rows: min-content;
         }
 
         & .txt22 {
@@ -322,8 +328,9 @@
     }
 
     &__footer {
-       
+
         margin-left: auto;
+
         @include mobile {
             margin: auto;
         }
@@ -337,15 +344,17 @@
         flex-direction: column;
         justify-content: center;
         gap: 5rem;
-        @include mobile{
+
+        @include mobile {
             padding: 0;
         }
-        & .tl1{
-            @include mobile{
+
+        & .tl1 {
+            @include mobile {
                 padding: 0 3rem;
             }
         }
-       
+
     }
 
     & .swiper {
@@ -410,7 +419,8 @@
             background-size: 3rem;
             background-repeat: no-repeat;
             transition: width .2s linear, height .2s linear;
-            @include mobile{
+
+            @include mobile {
                 transform: translate(-2rem, 2rem);
             }
 

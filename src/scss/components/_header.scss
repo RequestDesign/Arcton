@@ -59,7 +59,7 @@
 
         &-nav {
 
-            padding: 2rem 4rem;
+            padding: 2rem 8rem;
             box-sizing: border-box;
            
 
@@ -67,14 +67,20 @@
                 border-radius: 0 0 3rem 3rem;
                 position: relative;
                 z-index: 3;
-                background-color: $bg;
+              /*   background-color: $bg; */
+                background-image: url(../assets/images/header.svg);
+                background-position: top;
+                background-size: contain;
+                background-repeat: no-repeat;
                 &-angle {
+                   
                     position: absolute;
                     top: -18%;
                     height: 100%;
                     display: block;
                     z-index: 2;
 
+                    display: none;
                     &._left {
                         left: -4.7rem;
                         width: 5rem;

@@ -5,6 +5,7 @@
 
     @include mobile {
         height: 100rem;
+        
     }
 
     &::after {
@@ -45,8 +46,10 @@
         }
 
         &-border {
-            width: fit-content;
             margin-top: auto;
+            @include mobile{
+                display: none;
+            }
            
           
         }
