@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contacts</title>
 
-<script defer src="js/main.js"></script><link href="css/270.css" rel="stylesheet"><link href="css/main.css" rel="stylesheet"></head>
+<script defer src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head>
 
 <body>
     <div class="wrapper">
@@ -23,11 +23,11 @@
         <nav class="header__c-nav">
            
             <div class="header__c-nav-list txt18 _bold">
-                <a href="#">О компании</a>
-                <a href="#">О компании</a>
-                <a href="#">О компании</a>
-                <a href="#">О компании</a>
-                <a href="#">О компании</a>
+                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">Проекты</a>
+                <a href="#" class="txt18 _bold">Услуги</a>
+                <a href="#" class="txt18 _bold">Новости</a>
+                <a href="#" class="txt18 _bold">Контакты</a>
                 <a href="#" class="mobile">направления деятельности</a>
                 <div class="mobile header__c-nav-list-social">
                     <a href="tel:+71488228">
@@ -167,22 +167,22 @@
             </p>
         </div>
         <div class="request-form__body">
-            <form class="request-form__body-form">
+            <form class="request-form__body-form form">
 
                 <label class="input">
-                    <input type="text" placeholder="placeholder">
+                    <input type="text" name="name" data-required="y" placeholder="placeholder">
                     <span class="input-error"> добавь ._error на лэйбл</span>
                 </label>
                 <label class="input">
-                    <input type="text" placeholder="placeholder">
+                    <input type="text" name="company" data-required="y" placeholder="placeholder">
                     <span class="input-error"> добавь ._error на лэйбл</span>
                 </label>
                 <label class="input">
-                    <input type="text" name="phone" placeholder="telephone">
+                    <input type="text" data-required="y" name="phone" placeholder="telephone">
                     <span class="input-error"> добавь ._error на лэйбл</span>
                 </label>
                 <label class="input">
-                    <input type="text" placeholder="placeholder">
+                    <input type="text" name="email" data-required="y" placeholder="placeholder">
                     <span class="input-error"> добавь ._error на лэйбл</span>
                 </label>
 
@@ -199,7 +199,7 @@
                 </label>
 
 
-                <button class="btn-primary">
+                <button class="btn-primary form-submit">
                     <span class="btn-primary-text">
                        Отправить
                     </span>
@@ -216,16 +216,12 @@
     </div>
 </section>
         </main>
-        <div class="modal modal-request ">
-    <div class="modal-main  ">
-        <div class="modal-c-wrp modal-closer">
+        <div class="modal modal-request modal-closer">
+   
+        
             <div class="modal__c _request">
-                <div class="modal__c-closer   ui-bottom-angle _wh _left">
+                <div class="modal__c-closer  ">
                     <button class="modal__c-close modal-closer"></button>
-                    <!--  -->
-                    <span class="ui-bottom-angle-line _left"></span>
-                    <span class="ui-bottom-angle-round _left"></span>
-                 
                 </div>
               
                 
@@ -275,19 +271,15 @@
                 </form>
 
             </div>
-        </div>
-    </div>
+       
+   
 </div>
-<div class="modal modal-success ">
-    <div class="modal-main  ">
-        <div class="modal-c-wrp modal-closer">
+<div class="modal modal-success modal-closer">
+   
+     
             <div class="modal__c _success">
-                <div class="modal__c-closer  ui-bottom-angle _wh _left">
+                <div class="modal__c-closer  ">
                     <button class="modal__c-close modal-closer"></button>
-                    <!--  -->
-                    <span class="ui-bottom-angle-line _left"></span>
-                    <span class="ui-bottom-angle-round _left"></span>
-                 
                 </div>
                 <p class="tl1 ">
                     Заявка отправлена
@@ -303,8 +295,8 @@
                 </a>
 
             </div>
-        </div>
-    </div>
+       
+    
 </div>
 <!-- modals -->
 <!-- footer -->
@@ -321,12 +313,12 @@
             </li>
             <li>
                 <a href="#" class="txt18 _bold">О компании</a>
-                <a href="#" class="txt18 _bold">О компании</a>
-                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">Проекты</a>
+                <a href="#" class="txt18 _bold">Услуги</a>
             </li>
             <li>
-                <a href="#" class="txt18 _bold">О компании</a>
-                <a href="#" class="txt18 _bold">О компании</a>
+                <a href="#" class="txt18 _bold">Новости</a>
+                <a href="#" class="txt18 _bold">Контакты</a>
                 <a href="#" class="txt18 _bold">О компании</a>
             </li>
             <li>
