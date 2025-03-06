@@ -12,6 +12,31 @@ $(function () {
 
     dropDowns()
     modalsHandler()
+    document.querySelectorAll('.our-services , .about.advantages')
+        .forEach((e) => {
+          const t = e.querySelector('.swiper') 
+
+          if(e.querySelector('.swiper-btn')){
+            t.insertAdjacentHTML('beforeend', `
+                <div class="mobile swiper-ctrls">
+                   <div class="swiper-pag"></div>
+                   <div class="swiper-nav">
+                   </div>
+               </div>
+               `);
+          }else{
+            t.insertAdjacentHTML('beforeend', `
+                <div class="mobile swiper-ctrls">
+                   <div class="swiper-pag"></div>
+                   <div class="swiper-nav">
+                       <button class="swiper-btn swiper-btn-prev "></button>
+                       <button class="swiper-btn swiper-btn-next "></button>
+                   </div>
+               </div>
+               `);
+          }
+          
+        })
     initSwipers()
     initFancybox()
     initSwitchers()
@@ -28,9 +53,9 @@ $(function () {
         .forEach((f) => {
             if (f) {
                 new Form(f)
-                
+
             }
-           
+
         })
 
 })
@@ -101,11 +126,11 @@ function initSwipers() {
     const ourServices = document.querySelector('.our-services')
     if (ourServices) {
         new Swiper(ourServices.querySelector('.swiper'), {
-            modules: [Navigation],
+            modules: [Navigation, Pagination],
             loop: false,
             spaceBetween: rem(3),
-            slidesPerView: 1.2,
-            centeredSlides: true,
+            slidesPerView: 1.3,
+            centeredSlides: false,
             breakpoints: {
                 768: {
                     centeredSlides: false,
@@ -116,6 +141,16 @@ function initSwipers() {
             navigation: {
                 prevEl: ourServices.querySelector('.swiper-btn-prev'),
                 nextEl: ourServices.querySelector('.swiper-btn-next'),
+            },
+            pagination:{
+                el: ourServices.querySelector('.swiper-pag'),
+                type: 'fraction',
+                formatFractionCurrent: (n) => {
+                    return String(n).padStart(2, '0');
+                },
+                formatFractionTotal: (n) => {
+                    return String(n).padStart(2, '0');
+                }
             }
 
         })
@@ -284,9 +319,9 @@ function initSwipers() {
     const aboutAdv = document.querySelector('.about.advantages')
     if (aboutAdv) {
         new Swiper(aboutAdv.querySelector('.swiper'), {
-            modules: [Navigation],
+            modules: [Navigation, Pagination],
             slidesPerView: 1.2,
-            centeredSlides: true,
+            centeredSlides:false,
             spaceBetween: rem(3),
             breakpoints: {
                 768: {
@@ -297,6 +332,16 @@ function initSwipers() {
             navigation: {
                 prevEl: aboutAdv.querySelector('.swiper-btn-prev'),
                 nextEl: aboutAdv.querySelector('.swiper-btn-next')
+            },
+            pagination:{
+                el: aboutAdv.querySelector('.swiper-pag'),
+                type: 'fraction',
+                formatFractionCurrent: (n) => {
+                    return String(n).padStart(2, '0');
+                },
+                formatFractionTotal: (n) => {
+                    return String(n).padStart(2, '0');
+                }    
             }
         })
     }

@@ -1,4 +1,25 @@
-.swiper-nav {}
+.swiper-ctrls {
+
+    width: 100%;
+    height: 10rem;
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+
+    & .swiper-pag {
+        font-family: IBM Plex Sans;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 110.00000000000001%;
+        letter-spacing: 0%;
+        text-align: right;
+        color: rgba(215, 207, 210, 1);
+
+    }
+
+}
 
 .swiper-btn {
     width: 5.6rem;
@@ -7,6 +28,9 @@
     border-radius: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    @include mobile{
+        background-color: $red-dark;
+    }
 
     &:disabled {
         background-color: $bg !important;
@@ -25,10 +49,13 @@
 
     &-next {
         background-image: url(../assets/images/icons/arrow-small-right.svg);
+        background-position: 54% 50%;
     }
 
     &-prev {
         background-image: url(../assets/images/icons/arrow-small-left.svg);
+        background-position: 44% 50%;
+
     }
 }
 

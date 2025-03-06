@@ -151,16 +151,35 @@
 
         & .swiper-btn {
             position: absolute;
-            top: 13rem;
 
-            &-prev {
-                left: 0;
-                transform: translateX(-150%);
+            @include mobile {
+                display: block !important;
+                top: 88rem;
+
+                &-prev {
+                    right: 2rem;
+                    transform: translateX(-120%);
+                }
+
+                &-next {
+                    right: 2rem;
+                    transform: translateX(0);
+                }
             }
 
-            &-next {
-                right: 0;
-                transform: translateX(150%);
+            @include desktop {
+
+                top: 13rem;
+
+                &-prev {
+                    left: 0;
+                    transform: translateX(-150%);
+                }
+
+                &-next {
+                    right: 0;
+                    transform: translateX(150%);
+                }
             }
         }
 
@@ -175,6 +194,12 @@
 
                 @include mobile {
                     border-radius: 24px;
+                }
+            }
+
+            &-wrapper {
+                @include mobile {
+                    padding: 0 2rem;
                 }
             }
         }
@@ -215,14 +240,14 @@
                 display: flex;
                 @include br;
                 overflow: hidden;
-               
+
 
                 @include mobile {
                     mask-image: url(../assets/images/about-adv.svg);
                     mask-position: top right;
                     mask-size: 100%;
                     mask-repeat: no-repeat;
-                    border-radius:16px ;
+                    border-radius: 16px;
                     overflow: hidden;
                 }
 
@@ -241,6 +266,59 @@
         }
 
 
+    }
+}
+
+.advantages+.our-services {
+    background-color: transparent;
+
+    & .our-services__top-tags {
+        display: none !important;
+    }
+
+    & .our-services__top {
+        justify-content: center;
+
+        @include mobile {
+            & .txt22._bold.mobile {
+                display: none !important;
+            }
+
+            margin-bottom:4.8rem;
+        }
+    }
+
+    & .our-services__slide-link {
+        display: none;
+    }
+
+    & .our-services__slide-e {
+        background-color: $white;
+    }
+
+    & .our-services__bottom {
+        justify-content: center;
+
+        & .desktop.txt22._bold {
+            display: none;
+        }
+
+    }
+
+    @include mobile {
+        & .swiper-slide {
+            height: unset;
+            min-height: 100%;
+        }
+
+        & .our-services__slide-e {
+            min-height: 100%;
+            padding-bottom: 8rem;
+        }
+
+        & .swiper-btn {
+            top: 105.5rem;
+        }
     }
 }
 
@@ -270,8 +348,9 @@
     @include mobile {
         background-color: $white;
         padding: 8rem 0;
-        &+.request-form{
-             margin-top: 0;
+
+        &+.request-form {
+            margin-top: 0;
         }
     }
 
