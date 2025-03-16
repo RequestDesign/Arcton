@@ -29,18 +29,18 @@
     background-position: center;
     background-repeat: no-repeat;
     @include mobile{
-        background-color: $red-dark;
+        background-color: rgba(176, 167, 171, 1);
     }
 
     &:disabled {
         background-color: $bg !important;
         cursor: default;
     }
-
+/* 
     @include hover {
         background-color: $red-dark;
     }
-
+ */
 
     @include mobile {
         width: 9.2rem;
