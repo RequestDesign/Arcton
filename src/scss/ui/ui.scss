@@ -210,15 +210,15 @@
 
 }
 
-
 .ui-bottom-angle {
-    padding: 2rem 2rem;
+    padding: 4.9rem 2rem;
     padding-bottom: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     z-index: 3;
-    height: 8rem;
-    width: 42rem;
+    height: 10.9rem;
+    width: 55rem;
     display: flex;
     justify-content: center;
     mask-image: url(../assets/images/btn.svg);
@@ -420,6 +420,22 @@
 
 
     }
+}
+
+.ui-bottom-angle-main {
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 3;
+    height: 8rem;
+    width: 42rem;
+    display: flex;
+    justify-content: center;
+    mask-image: url(../assets/images/btn.svg);
+    mask-size: 100% auto;
+    mask-position: top left;
+    mask-repeat: no-repeat;
 }
 
 .ui-pagination-angle {

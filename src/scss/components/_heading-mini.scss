@@ -47,6 +47,7 @@
 
         &-border {
             margin-top: auto;
+            margin-left: -14.6rem;
             @include mobile{
                 display: none;
             }

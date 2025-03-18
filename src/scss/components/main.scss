@@ -168,8 +168,6 @@
             padding: 1rem;
 
         }
-
-        & ._footer {}
     }
 
     &__bottom {
@@ -252,8 +250,8 @@
 
     &__top {
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 15rem;
+        grid-template-columns: 24% 48% 12.6%;
+        gap: 12rem;
         align-items: center;
 
         @include mobile {
@@ -270,13 +268,14 @@
             background-color: $bg;
             border-radius: 0 0 3rem 0;
             height: 100%;
-            width: 100%;
+            width: 96.2%;
             display: flex;
             align-items: center;
         }
 
         & .tag {
             transform: translateY(-2rem);
+            align-items: end;
 
             @include mobile {
                 display: flex;
@@ -288,6 +287,7 @@
 
             & span+span {
                 text-align: right;
+                margin-top: 3rem;
 
                 @include mobile {
                     text-align: left;
@@ -297,8 +297,9 @@
     }
 
     &__list {
+        width: 100%;
         display: flex;
-        gap: 12rem;
+        justify-content: space-between;/*ПОМЕТКА */
         flex-wrap: wrap;
 
         @include mobile {
@@ -414,7 +415,7 @@
             height: 7rem;
             border-radius: 50%;
             background-color: $gray;
-            background-image: url(../assets/images/icons/zoom.svg);
+            background-image: url(../assets/images/icons/zoom.png);
             background-position: center;
             background-size: 3rem;
             background-repeat: no-repeat;

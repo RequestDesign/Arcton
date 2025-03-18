@@ -119,14 +119,14 @@
     & .container {
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 7rem;
 
         @include mobile {
             padding: 0;
         }
 
         & .btn-primary {
-            margin: auto;
+            margin-top: 5rem;
         }
     }
 
@@ -188,8 +188,8 @@
 
             &-slide {
                 background-color: $red-dark;
-                border-radius: 3rem;
-                padding: 1rem 2rem;
+                border-radius: 2rem;
+                padding: .5rem 1.5rem;
                 box-sizing: border-box;
 
                 @include mobile {
@@ -228,7 +228,7 @@
             &-count {
                 position: absolute;
                 right: -.1px;
-                top: -.1px;
+                top: 21px;
                 clip-path: polygon(100% 0, 0 0, 100% 100%);
                 padding: 0 0 7rem 5rem;
 
@@ -261,7 +261,7 @@
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 5rem;
+                gap: 4rem;
             }
         }
 
