@@ -248,7 +248,7 @@
         gap: 8rem;
     }
 
-    &__top {
+    &__top { //ПОПРАВКА
         display: grid;
         grid-template-columns: 24% 48% 12.6%;
         gap: 12rem;
@@ -264,7 +264,7 @@
             padding-top: 2rem;
         }
 
-        &-heading {
+        &-heading { //ПОПРАВКА
             background-color: $bg;
             border-radius: 0 0 3rem 0;
             height: 100%;
@@ -285,9 +285,9 @@
                 transform: translateY(0);
             }
 
-            & span+span {
+            & span+span { //ПОПРАВКА
                 text-align: right;
-                margin-top: 3rem;
+                margin-top: 3rem; 
 
                 @include mobile {
                     text-align: left;
@@ -296,10 +296,10 @@
         }
     }
 
-    &__list {
+    &__list { //ПОПРАВКА
         width: 100%;
         display: flex;
-        justify-content: space-between;/*ПОМЕТКА */
+        justify-content: space-between;
         flex-wrap: wrap;
 
         @include mobile {
@@ -406,7 +406,7 @@
             height: auto;
         }
 
-        &-zoom {
+        &-zoom { //ПОПРАВКА
             position: absolute;
             top: 0;
             right: 0;

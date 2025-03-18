@@ -108,7 +108,7 @@
 } */
 
 .ui-heading-angle {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     box-sizing: border-box;
     position: relative;
     z-index: 3;
@@ -210,7 +210,7 @@
 
 }
 
-.ui-bottom-angle {
+.ui-bottom-angle { //ПОПРАВКА
     padding: 4.9rem 2rem;
     padding-bottom: 0;
     -webkit-box-sizing: border-box;
@@ -422,7 +422,7 @@
     }
 }
 
-.ui-bottom-angle-main {
+.ui-bottom-angle-main { //ПОПРАВКА
     padding: 2rem 2rem;
     padding-bottom: 0;
     box-sizing: border-box;
